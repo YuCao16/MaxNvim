@@ -26,15 +26,18 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'majutsushi/tagbar'
     Plug 'mhinz/vim-startify'
-    Plug 'scrooloose/NERDTree'		      " File Explorer
-    Plug 'vim-airline/vim-airline'
+    " Plug 'scrooloose/NERDTree'		      " File Explorer
+    " Plug 'vim-airline/vim-airline'
+    Plug 'nvim-lualine/lualine.nvim'
+    Plug 'romgrk/barbar.nvim'
     Plug 'petertriho/nvim-scrollbar'
-
     Plug 'kyazdani42/nvim-tree.lua'
     
     " Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
     " Plug 'kevinhwang91/rnvimr'
     " Plug 'tamago324/lir.nvim'
+    " Plug 'goolord/alpha-nvim'
+    " Plug 'akinsho/bufferline.nvim'
 
     "-------------------=== Utile ===-------------
     Plug 'antoinemadec/FixCursorHold.nvim'
@@ -43,6 +46,7 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'		      " Search Tools
     Plug 'Pocco81/TrueZen.nvim'
+    Plug 'folke/zen-mode.nvim'
     Plug 'matbme/JABS.nvim'
     Plug 'karb94/neoscroll.nvim'
     Plug 'camspiers/animate.vim'        " window resizer
@@ -54,6 +58,8 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
     Plug 'nvim-neorg/neorg'
     Plug 'tpope/vim-repeat'
     Plug 'ethanholz/nvim-lastplace'
+	Plug 'rcarriga/nvim-notify'
+	Plug 'lewis6991/impatient.nvim'
 
     " Plug 'junegunn/goyo.vim'
     " Plug 'folke/twilight.nvim'
@@ -61,6 +67,9 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
 
     "-------------------=== Code/Project navigation ===-------------
     Plug 'windwp/nvim-autopairs'
+	Plug 'RRethy/nvim-treesitter-endwise'
+	Plug 'romgrk/nvim-treesitter-context'
+	Plug 'nvim-treesitter/playground'
     Plug 'sbdchd/neoformat'		   " Format .tex
     " Plug 'scrooloose/nerdcommenter'
     Plug 'numToStr/Comment.nvim'
@@ -69,7 +78,8 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
     Plug 'junegunn/vim-easy-align'
     Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'akinsho/toggleterm.nvim'
-    Plug 'michaelb/sniprun'
+    " Plug 'michaelb/sniprun'
+    Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
     Plug 'weilbith/nvim-code-action-menu'
     Plug 'tpope/vim-surround'
     Plug 'honza/vim-snippets'                 " snippets repo
@@ -106,9 +116,7 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
 
     Plug 'goerz/jupytext.vim'
 
-
-
-"-------------------=== Games ===-------------------------------
+	"-------------------=== Games ===--------------------------
     Plug 'ThePrimeagen/vim-be-good'    "game
     Plug 'ianding1/leetcode.vim'
     Plug 'tjdevries/train.nvim'
@@ -131,11 +139,13 @@ call plug#begin('~/.local/share/nvim/autoload/plugged')
     Plug 'lewis6991/spellsitter.nvim'
     Plug 'p00f/nvim-ts-rainbow'
     Plug 'tomasiser/vim-code-dark'
+    Plug 'marko-cerovac/material.nvim'
+    Plug 'yucao16/monokai_transparent'
 
     "-------------------=== Other ===-------------------------------
     Plug 'tami5/sqlite.lua'
     Plug 'gennaro-tedesco/nvim-peekup'
-    
+
     " Plug 'TaDaa/vimade'                       " Eye Protection
 
     "-------------------=== Unknown ===-------------------------------
