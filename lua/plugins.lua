@@ -256,7 +256,7 @@ return require("packer").startup(function()
 			remap("i", "<CR>", "v:lua.MUtils.completion_confirm()", { expr = true, noremap = true })
 		end,
 	})
-	-- use({ "RRethy/nvim-treesitter-endwise" })
+	use({ "RRethy/nvim-treesitter-endwise" })
 	use({
 		"romgrk/nvim-treesitter-context",
 		-- event = 'BufAdd',

@@ -185,6 +185,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	endwise = {
 		enable = true,
+		disable = {"lua"}
 	},
 	playground = {
 		enable = true,
