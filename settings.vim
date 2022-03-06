@@ -57,12 +57,21 @@ endfunction
 
 " Switch format package for different filetype
 function! SwitchFormatter()
-    if &filetype == 'tex'
-	:Neoformat latexindent
-    else
+    if &filetype == 'python'
 	:call CocAction('format')
+	elseif &filetype == 'markdown'
+	:call CocAction('format')
+    else
+	:Neoformat
     endif
 endfunction
+" function! SwitchFormatter()
+"     if &filetype == 'tex'
+" 	:Neoformat latexindent
+"     else
+" 	:call CocAction('format')
+"     endif
+" endfunction
 
 function! Transparent_bg()
 	if g:colors_name == 'github_dark'

@@ -119,10 +119,10 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "antoinemadec/FixCursorHold.nvim" })
-	use({ "famiu/bufdelete.nvim", event = "BufAdd" })
+	use({ "famiu/bufdelete.nvim", event = { "BufAdd" } })
 	use({ "tmhedberg/SimpylFold", event = "BufAdd" })
-	-- use("junegunn/fzf")
-	-- use("junegunn/fzf.vim") -- " Search Tools
+	use({ "junegunn/fzf" })
+	use({ "junegunn/fzf.vim" }) -- " Search Tools
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
@@ -256,7 +256,7 @@ return require("packer").startup(function()
 			remap("i", "<CR>", "v:lua.MUtils.completion_confirm()", { expr = true, noremap = true })
 		end,
 	})
-	use({ "RRethy/nvim-treesitter-endwise" })
+	-- use({ "RRethy/nvim-treesitter-endwise" })
 	use({
 		"romgrk/nvim-treesitter-context",
 		-- event = 'BufAdd',

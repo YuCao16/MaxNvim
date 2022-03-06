@@ -212,7 +212,7 @@ require("nvim-treesitter.configs").setup({
 require("orgmode").setup({
 	org_highlight_latex_and_related = "native",
 })
-local action_set = require('telescope.actions.set')
+-- local action_set = require('telescope.actions.set')
 
 -- require("orgmode").setup({
 -- 	org_agenda_files = { "~/Dropbox/org/*", "~/my-orgs/**/*" },

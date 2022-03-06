@@ -10,8 +10,8 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+edit lua/mappings.lua
 argglobal
-enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -20,11 +20,21 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 29 - ((17 * winheight(0) + 17) / 35)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 29
+normal! 033|
 tabnext 1
-badd +27 ~/.config/nvim/lua/mappings.lua
-badd +82 ~/.config/nvim/settings.vim
-badd +20 lua/autocmd.lua
-badd +211 ~/.config/nvim/lua/load_plugins.lua
+badd +29 lua/mappings.lua
+badd +63 settings.vim
+badd +21 lua/autocmd.lua
+badd +179 lua/load_plugins.lua
+badd +259 lua/plugins.lua
+badd +120 lua/vimplug_settings.lua
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -36,7 +46,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

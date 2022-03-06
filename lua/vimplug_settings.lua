@@ -116,7 +116,8 @@ g["UltiSnipsSnippetsDir"] = "~/.config/nvim/UltiSnips"
 -- "=====================================================
 -- "" Dashboard settings
 -- "=====================================================
-g["dashboard_default_executive"] = "telescope"
+-- g["dashboard_default_executive"] = "telescope"
+g["dashboard_default_executive"] = "fzf"
 g["dashboard_session_directory"] = "Users/caoyu/.local/share/nvim/session"
 cmd([[
 let g:dashboard_custom_header = [
