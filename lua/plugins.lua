@@ -191,7 +191,7 @@ return require("packer").startup(function()
 				auto_session_enable_last_session = false,
 				auto_session_root_dir = vim.fn.stdpath("data") .. "/session/",
 				auto_session_enabled = true,
-				auto_save_enabled = true,
+				auto_save_enabled = false,
 				auto_restore_enabled = false,
 				auto_session_suppress_dirs = nil,
 			}
@@ -204,6 +204,7 @@ return require("packer").startup(function()
 		config = function()
 			require("session_manager").setup({
 				autoload_mode = false,
+				sessions_dir = '~/.local/share/nvim/sessions/'
 			})
 		end,
 	})
