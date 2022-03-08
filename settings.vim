@@ -101,6 +101,20 @@ function Handle_nvimtree()
 end
 EOF
 
+lua << EOF
+function Handle_backgound()
+	if vim.bo.filetype == "dashboard" then
+		-- require'github-theme'.setup({transparent=true})
+		vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+		-- vim.cmd("hi NonText ctermbg=NONE guibg=NONE")
+	else
+		-- vim.cmd([[hi Normal guibg='pink' ctermbg='pink' ]])
+		vim.cmd("colorscheme everforest")
+		vim.cmd("colorscheme github_dark")
+	end
+end
+EOF
+
 function! Handle_dashboard()
 	if len(getbufinfo({'buflisted':1}))==0
 	:q

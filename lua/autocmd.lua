@@ -17,6 +17,9 @@
 -- ]])
 vim.cmd([[
 autocmd FileType dashboard nnoremap <buffer> q :call Handle_dashboard()<CR>
+"autocmd FileType * :lua Handle_backgound()
+"autocmd FileType dashboard <buffer> :lua Handle_backgound()
+"autocmd FileType * if &ft!="dashboard" |:lua Handle_backgound() |endif
 autocmd FileType startify :lua require"nvim-tree".toggle(false, true)
 ]])
 -- vim.cmd([[autocmd FileType dashboard hi Normal guibg=NONE ctermbg=NONE ]])

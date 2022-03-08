@@ -9,6 +9,7 @@
 
 -- require('impatient')
 require('plugins')
+require('bubbles')
 require('mappings')
 vim.cmd('source $HOME/.config/nvim/settings.vim')
 require('vimplug_settings')

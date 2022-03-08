@@ -12,6 +12,7 @@ argglobal
 %argdel
 edit lua/mappings.lua
 argglobal
+balt lua/mappings.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -29,7 +30,7 @@ normal! zt
 keepjumps 29
 normal! 033|
 tabnext 1
-badd +29 lua/mappings.lua
+badd +0 lua/mappings.lua
 badd +63 settings.vim
 badd +21 lua/autocmd.lua
 badd +179 lua/load_plugins.lua
@@ -46,6 +47,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
