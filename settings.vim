@@ -113,6 +113,14 @@ function Handle_backgound()
 		vim.cmd("colorscheme github_dark")
 	end
 end
+
+-- function Handle_ColorColumn()
+-- 	if vim.bo.filetype == "python" then
+-- 		vim.cmd("hi ColorColumn guibg=#ff3131 ctermbg=236")
+-- 	else
+-- 		vim.cmd("hi ColorColumn guibg=None ctermbg=None")
+-- 	end
+-- end
 EOF
 
 function! Handle_dashboard()
@@ -122,6 +130,7 @@ function! Handle_dashboard()
 	:bd
 	endif
 endfunction
+
 
 function! Show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

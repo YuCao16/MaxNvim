@@ -12,35 +12,43 @@ return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 
 	-- "-------------------=== Basic ===-------------
-	use({ "neoclide/coc.nvim", branch = "release", event = { "BufAdd", "InsertEnter" } })
+	use({
+		"neoclide/coc.nvim",
+		branch = "release",
+		event = { "BufAdd", "InsertEnter" },
+		ft = { "python", "markdown", "tex", "ipynb", "org", "json", "html" },
+	})
 	use({ "majutsushi/tagbar", ft = { "python", "markdown", "tex", "ipynb", "org" } })
-	-- use { 'sidebar-nvim/sidebar.nvim',
-	-- 	config = function()
-	-- 		require("sidebar-nvim").setup({
-	-- 			sections = {
-	-- 				"datetime","git","symbols","todos"
-	-- 			},
-	-- 			symbols = {
-	-- 				icon = "ƒ"
-	-- 			}
-	-- 		})
-	-- 	end
-	-- }
+	use({
+		"sidebar-nvim/sidebar.nvim",
+		event = { "BufAdd", "InsertEnter" },
+		config = function()
+			require("sidebar-nvim").setup({
+				sections = {
+					"datetime",
+					"git",
+					"symbols",
+					"todos",
+				},
+				symbols = {
+					icon = "ƒ",
+				},
+			})
+		end,
+	})
 	use({
 		"akinsho/bufferline.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		config = function()
-			require("bufferline").setup()
+			require("bufferline").setup({
+				options = {
+					close_command = "Bdelete! %d",
+					left_mouse_command = "Bdelete! %d",
+				}
+			})
 		end,
 	})
 	use({ "mhinz/vim-startify", event = { "BufAdd", "InsertEnter" } })
-	-- use({ "mhinz/vim-startify" })
-	-- use {
-	-- 	'goolord/alpha-nvim',
-	-- 	config = function ()
-	-- 		require'alpha'.setup(require'alpha.themes.dashboard'.config)
-	-- 	end
-	-- }
 	use({ "glepnir/dashboard-nvim" })
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -48,17 +56,15 @@ return require("packer").startup(function()
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "github",
+					theme = "auto",
 				},
-				-- sections = {
-				-- 	lualine_x = {'encoding', 'filesize', 'filetype'}
-				-- },
 			})
 		end,
 	})
 	use({
 		"petertriho/nvim-scrollbar",
 		event = { "BufAdd", "InsertEnter" },
+		ft = { "python", "markdown", "tex", "ipynb", "org" },
 		config = function()
 			require("scrollbar").setup()
 		end,
@@ -66,6 +72,7 @@ return require("packer").startup(function()
 	use({
 		"folke/zen-mode.nvim",
 		event = { "BufAdd", "InsertEnter" },
+		ft = { "python", "markdown", "tex", "ipynb", "org" },
 		config = function()
 			require("zen-mode").setup({
 				window = {
@@ -121,13 +128,49 @@ return require("packer").startup(function()
 	-- "-------------------=== Utile ===-------------
 	use({
 		"lewis6991/impatient.nvim",
-		config = function()
-			require("impatient")
-		end,
+		-- config = function()
+		-- 	require("impatient")
+		-- end,
 	})
 	use({ "antoinemadec/FixCursorHold.nvim" })
-	use({ "famiu/bufdelete.nvim", event = { "BufAdd", "InsertEnter" } })
-	use({ "tmhedberg/SimpylFold", event = { "BufAdd", "InsertEnter" } })
+	use({ "famiu/bufdelete.nvim", event = { "BufAdd" } })
+	use({
+		"anuvyklack/pretty-fold.nvim",
+		config = function()
+			require("pretty-fold").setup({
+				keep_indentation = false,
+				fill_char = "━",
+				sections = {
+					left = {
+						"━ ",
+						function()
+							return string.rep("*", vim.v.foldlevel)
+						end,
+						" ━┫",
+						"content",
+						"┣",
+					},
+					right = {
+						"┫ ",
+						"number_of_folded_lines",
+						": ",
+						"percentage",
+						" ┣━━",
+					},
+				},
+				config = {
+					key = "h", -- 'h', 'l' or nil (if you would like to set your own keybinding)
+
+					-- 'none', "single", "double", "rounded", "solid", 'shadow' or table
+					-- For explanation see: :help nvim_open_win()
+					border = { " ", "", " ", " ", " ", " ", " ", " " },
+				},
+			})
+			require("pretty-fold.preview").setup({
+				border = "single",
+			})
+		end,
+	})
 	use({ "junegunn/fzf" })
 	use({ "junegunn/fzf.vim" }) -- " Search Tools
 	use({
@@ -151,36 +194,15 @@ return require("packer").startup(function()
 		end,
 	})
 	use({
-		"matbme/JABS.nvim",
-		event = { "BufAdd", "InsertEnter" },
-		config = function()
-			local ui = vim.api.nvim_list_uis()[1]
-			require("jabs").setup({
-				position = "corner", -- center, corner
-				width = 50,
-				height = 10,
-				border = "shadow", -- none, single, double, rounded, solid, shadow, (or an array or chars)
-				preview_position = "left", -- top, bottom, left, right
-				preview = {
-					width = 40,
-					height = 30,
-					border = "double", -- none, single, double, rounded, solid, shadow, (or an array or chars)
-				},
-				col = ui.width, -- Window appears on the right
-				row = ui.height / 2, -- Window appears in the vertical middle
-			})
-		end,
-	})
-	use({
 		"karb94/neoscroll.nvim",
-		event = { "BufAdd", "InsertEnter" },
+		-- event = { "BufAdd", "InsertEnter", "VimEnter" },
 		config = function()
 			require("neoscroll").setup()
 		end,
 	})
 	use({ "camspiers/animate.vim" }) -- " window resizer
 	use({ "camspiers/lens.vim" })
-	use({ "sindrets/winshift.nvim", event = { "BufAdd", "InsertEnter" } })
+	use({ "https://gitlab.com/yorickpeterse/nvim-window.git", event = { "BufAdd" } })
 	use({ "junegunn/limelight.vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "kevinhwang91/nvim-hlslens", event = { "BufAdd", "InsertEnter" } })
 	use({
@@ -204,7 +226,7 @@ return require("packer").startup(function()
 		config = function()
 			require("session_manager").setup({
 				autoload_mode = false,
-				sessions_dir = '~/.local/share/nvim/sessions/'
+				-- sessions_dir = "~/.local/share/nvim/sessions/",
 			})
 		end,
 	})
@@ -238,8 +260,44 @@ return require("packer").startup(function()
 	use({ "rcarriga/nvim-notify" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({ "RRethy/vim-illuminate", event = { "BufAdd", "InsertEnter" } })
+	use({
+		"gbprod/substitute.nvim",
+		event = { "BufAdd", "InsertEnter" },
+		config = function()
+			require("substitute").setup()
+		end,
+	})
+	use({
+		"gennaro-tedesco/nvim-peekup",
+		config = function()
+			require("nvim-peekup.config").on_keystroke["delay"] = "100ms"
+		end,
+	})
 
-	-- " use 'folke/twilight.nvim'
+	-- use({ "tmhedberg/SimpylFold", event = { "BufAdd", "InsertEnter" } })
+	-- use({ "folke/twilight.nvim" })
+	-- use({ "sindrets/winshift.nvim", event = { "BufAdd", "InsertEnter" } })
+	-- use({
+	-- 	"matbme/JABS.nvim",
+	-- 	event = { "BufAdd", "InsertEnter" },
+	-- 	config = function()
+	-- 		local ui = vim.api.nvim_list_uis()[1]
+	-- 		require("jabs").setup({
+	-- 			position = "corner", -- center, corner
+	-- 			width = 50,
+	-- 			height = 10,
+	-- 			border = "shadow", -- none, single, double, rounded, solid, shadow, (or an array or chars)
+	-- 			preview_position = "left", -- top, bottom, left, right
+	-- 			preview = {
+	-- 				width = 40,
+	-- 				height = 30,
+	-- 				border = "double", -- none, single, double, rounded, solid, shadow, (or an array or chars)
+	-- 			},
+	-- 			col = ui.width, -- Window appears on the right
+	-- 			row = ui.height / 2, -- Window appears in the vertical middle
+	-- 		})
+	-- 	end,
+	-- })
 
 	-- "-------------------=== Code/Project navigation ===-------------
 	use({
@@ -264,13 +322,13 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "RRethy/nvim-treesitter-endwise" })
-	use({
-		"romgrk/nvim-treesitter-context",
-		-- event = 'BufAdd',
-		config = function()
-			require("treesitter-context").setup()
-		end,
-	})
+	-- use({
+	-- 	"romgrk/nvim-treesitter-context",
+	-- 	-- event = 'BufAdd',
+	-- 	config = function()
+	-- 		require("treesitter-context").setup()
+	-- 	end,
+	-- })
 	use({
 		"lewis6991/spellsitter.nvim",
 		-- event = 'BufAdd',
@@ -306,7 +364,7 @@ return require("packer").startup(function()
 			vim.opt.listchars:append("eol:↴")
 			require("indent_blankline").setup({
 				space_char_blankline = " ",
-				filetype_exclude = { "dashboard" },
+				filetype_exclude = { "dashboard", "lsp-installer" },
 				buftype_exclude = { "terminal" },
 				char_highlight_list = {
 					"IndentBlanklineIndent1",
@@ -341,9 +399,10 @@ return require("packer").startup(function()
 	-- "use 'Yggdroot/indentLine'
 
 	-- "-------------------=== Debugging navigation ===-------------
-	use({ "mfussenegger/nvim-dap", event = { "BufAdd", "InsertEnter" } })
+	use({ "mfussenegger/nvim-dap", ft = { "python" }, event = { "BufAdd", "InsertEnter" } })
 	use({
 		"rcarriga/nvim-dap-ui",
+		ft = { "python" },
 		event = { "BufAdd", "InsertEnter" },
 		config = function()
 			require("dapui").setup()
@@ -352,6 +411,7 @@ return require("packer").startup(function()
 	use({
 		"Pocco81/DAPInstall.nvim",
 		event = { "BufAdd", "InsertEnter" },
+		ft = { "python" },
 		config = function()
 			local dap_install = require("dap-install")
 
@@ -373,7 +433,8 @@ return require("packer").startup(function()
 	})
 	use({
 		"mfussenegger/nvim-dap-python",
-		event = { "BufAdd", "InsertEnter" },
+		ft = { "python" },
+		-- event = { "BufAdd", "InsertEnter" },
 		config = function()
 			require("dap-python").setup("/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9")
 		end,
@@ -386,15 +447,22 @@ return require("packer").startup(function()
 	use({ "jbyuki/nabla.nvim", ft = { "markdown", "tex", "ipynb", "org" } })
 
 	use({ "plasticboy/vim-markdown", ft = { "markdown", "tex", "ipynb" } }) -- " MarkDown
-	use({ "godlygeek/tabular", event = { "BufAdd", "InsertEnter" } })
+	use({
+		"godlygeek/tabular",
+		ft = { "markdown", "tex", "ipynb", "org", "json" },
+		event = { "BufAdd", "InsertEnter" },
+	})
 	use({ "ellisonleao/glow.nvim", ft = { "markdown" } })
 	-- use("vim-pandoc/vim-pandoc")
 
 	use({ "chrisbra/csv.vim", ft = { "csv" } }) -- " CSV
 
 	use({ "nvim-orgmode/orgmode" }) -- " ORG
+	-- use { 'jceb/vim-orgmode' }
 	use({
 		"akinsho/org-bullets.nvim",
+		-- ft = { "org" },
+		-- after = 'nvim-orgmode/orgmode',
 		config = function()
 			require("org-bullets").setup({
 				symbols = { "◉", "○", "✸", "✿" },
@@ -402,7 +470,11 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "lukas-reineke/headlines.nvim" })
-	use({ "dhruvasagar/vim-table-mode", event = { "BufAdd", "InsertEnter" } })
+	use({
+		"dhruvasagar/vim-table-mode",
+		ft = { "markdown", "tex", "ipynb", "org" },
+		event = { "BufAdd", "InsertEnter" },
+	})
 
 	use({ "goerz/jupytext.vim", ft = { "markdown", "tex", "ipynb" } })
 
@@ -410,7 +482,6 @@ return require("packer").startup(function()
 	use({ "ThePrimeagen/vim-be-good", event = { "BufAdd", "InsertEnter" } }) --"game
 	use({ "ianding1/leetcode.vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "tjdevries/train.nvim", event = { "BufAdd", "InsertEnter" } })
-	-- " use 'ThePrimeagen/vim-apm'
 	use({
 		"gbprod/cutlass.nvim",
 		config = function()
@@ -422,38 +493,16 @@ return require("packer").startup(function()
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		-- config = function()
-		-- 	local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
-		-- 	parser_configs.norg_meta = {
-		-- 		install_info = {
-		-- 			url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
-		-- 			files = { "src/parser.c" },
-		-- 			branch = "main",
-		-- 		},
-		-- 	}
-		-- 	parser_configs.norg = {
-		-- 		install_info = {
-		-- 			url = "https://github.com/vhyrro/tree-sitter-norg",
-		-- 			files = { "src/parser.c", "src/scanner.cc" },
-		-- 			branch = "main",
-		-- 		},
-		-- 	}
-		-- 	parser_configs.norg_table = {
-		-- 		install_info = {
-		-- 			url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
-		-- 			files = { "src/parser.c" },
-		-- 			branch = "main",
-		-- 		},
-		-- 	}
-		-- end,
 	})
 	use({ "p00f/nvim-ts-rainbow", event = { "BufAdd", "InsertEnter" } })
 	use({ "nvim-treesitter/playground", event = { "BufAdd", "InsertEnter" } })
 
 	use({ "ryanoasis/vim-devicons", event = { "BufAdd", "InsertEnter" } }) -- " Beautiful Icon
-	use("kyazdani42/nvim-web-devicons")
+	use({ "kyazdani42/nvim-web-devicons" })
 
-	use("projekt0n/github-nvim-theme")
+	-- use({ "projekt0n/github-nvim-theme", commit = "715c554" })
+	use({ "projekt0n/github-nvim-theme" })
+	use({ "sainnhe/everforest" })
 	use({ "ayu-theme/ayu-vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "arcticicestudio/nord-vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "joshdick/onedark.vim", event = { "BufAdd", "InsertEnter" } })
@@ -465,27 +514,25 @@ return require("packer").startup(function()
 	use({ "marko-cerovac/material.nvim", event = { "BufAdd", "InsertEnter" } })
 	use({ "olimorris/onedarkpro.nvim", event = { "BufAdd", "InsertEnter" } })
 	use({ "rose-pine/neovim", event = { "BufAdd", "InsertEnter" } })
-	use({ "sainnhe/everforest" })
+	use({ "folke/tokyonight.nvim", event = { "BufAdd", "InsertEnter" } })
+	use({ "sainnhe/edge", event = { "BufAdd", "InsertEnter" } })
 	use({ "sainnhe/gruvbox-material", event = { "BufAdd", "InsertEnter" } })
 
+	-- "-------------------=== UI ===-------------------------------
+	use({ "MunifTanjim/nui.nvim" })
+	use({ "nvim-lua/plenary.nvim" })
+	use({ "RishabhRD/popfix" })
+	use("machakann/vim-highlightedyank") --highlight yank region
+
+	-- "-------------------=== LSP ===-------------------------------
+	use({ "neovim/nvim-lspconfig", event = { "BufAdd", "InsertEnter" } })
+	use({ "williamboman/nvim-lsp-installer" })
 	-- "-------------------=== Other ===-------------------------------
 	use({ "tami5/sqlite.lua" })
-	use({
-		"gennaro-tedesco/nvim-peekup",
-		config = function()
-			require("nvim-peekup.config").on_keystroke["delay"] = "100ms"
-		end,
-	})
 
 	-- " use 'TaDaa/vimade'                       " Eye Protection
 
 	-- "-------------------=== Unknown ===-------------------------------
-	use("machakann/vim-highlightedyank")
-	use({ "neovim/nvim-lspconfig", event = { "BufAdd", "InsertEnter" } })
-	use({ "svermeulen/vimpeccable", event = { "BufAdd", "InsertEnter" } })
-	use({ "RishabhRD/popfix" })
-	use({ "williamboman/nvim-lsp-installer" })
-	use({ "MunifTanjim/nui.nvim" })
-	use({ "nvim-lua/plenary.nvim" })
 	use({ "neomake/neomake", event = { "BufAdd", "InsertEnter" } })
+	-- use({ "svermeulen/vimpeccable", event = { "BufAdd", "InsertEnter" } })
 end)

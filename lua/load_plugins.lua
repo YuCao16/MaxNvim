@@ -182,6 +182,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
+		-- disable = { "org" }
 	},
 	endwise = {
 		enable = true,
@@ -211,9 +212,33 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("orgmode").setup({
-	org_highlight_latex_and_related = "native",
+	org_highlight_latex_and_related = "entities",
 	org_agenda_files = {'~/Dropbox/org/*', '~/org/**/*'},
+	-- org_indent_mode = 'noindent',
 })
+
+local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
+parser_configs.norg_meta = {
+	install_info = {
+		url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
+		files = { "src/parser.c" },
+		branch = "main",
+	},
+}
+parser_configs.norg = {
+	install_info = {
+		url = "https://github.com/vhyrro/tree-sitter-norg",
+		files = { "src/parser.c", "src/scanner.cc" },
+		branch = "main",
+	},
+}
+parser_configs.norg_table = {
+	install_info = {
+		url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
+		files = { "src/parser.c" },
+		branch = "main",
+	},
+}
 -- local action_set = require('telescope.actions.set')
 
 -- require("orgmode").setup({

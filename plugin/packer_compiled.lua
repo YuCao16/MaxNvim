@@ -90,21 +90,6 @@ _G.packer_plugins = {
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
     url = "https://github.com/antoinemadec/FixCursorHold.nvim"
   },
-  ["JABS.nvim"] = {
-    config = { "\27LJ\2\nÑ\2\0\0\5\0\r\1\0196\0\0\0009\0\1\0009\0\2\0B\0\1\2:\0\1\0006\1\3\0'\3\4\0B\1\2\0029\1\5\0015\3\6\0005\4\a\0=\4\b\0039\4\t\0=\4\n\0039\4\v\0\25\4\0\4=\4\f\3B\1\2\1K\0\1\0\brow\vheight\bcol\nwidth\fpreview\1\0\3\vborder\vdouble\nwidth\3(\vheight\3\30\1\0\5\rposition\vcorner\nwidth\0032\21preview_position\tleft\vborder\vshadow\vheight\3\n\nsetup\tjabs\frequire\18nvim_list_uis\bapi\bvim\4\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/JABS.nvim",
-    url = "https://github.com/matbme/JABS.nvim"
-  },
-  SimpylFold = {
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/SimpylFold",
-    url = "https://github.com/tmhedberg/SimpylFold"
-  },
   ["TrueZen.nvim"] = {
     config = { "\27LJ\2\n¡\1\0\0\a\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\n\0005\4\b\0005\5\4\0005\6\3\0=\6\5\0055\6\6\0=\6\a\5=\5\t\4=\4\v\3B\1\2\1K\0\1\0\nmodes\1\0\0\rataraxis\1\0\0\14custom_bg\1\2\0\0\f#1e222a\29ideal_writing_area_width\1\0\1\29disable_bg_configuration\1\1\2\0\0\3\0\nsetup\rtrue-zen\frequire\0" },
     loaded = false,
@@ -119,7 +104,7 @@ _G.packer_plugins = {
     url = "https://github.com/camspiers/animate.vim"
   },
   ["auto-session"] = {
-    config = { "\27LJ\2\nâ\2\0\0\4\0\n\0\0165\0\0\0006\1\1\0009\1\2\0019\1\3\1'\3\4\0B\1\2\2'\2\5\0&\1\2\1=\1\6\0006\1\a\0'\3\b\0B\1\2\0029\1\t\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\17auto-session\frequire\26auto_session_root_dir\14/session/\tdata\fstdpath\afn\bvim\1\0\5\22auto_save_enabled\2%auto_session_enable_last_session\1\25auto_restore_enabled\1\14log_level\tinfo\25auto_session_enabled\2\0" },
+    config = { "\27LJ\2\nâ\2\0\0\4\0\n\0\0165\0\0\0006\1\1\0009\1\2\0019\1\3\1'\3\4\0B\1\2\2'\2\5\0&\1\2\1=\1\6\0006\1\a\0'\3\b\0B\1\2\0029\1\t\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\17auto-session\frequire\26auto_session_root_dir\14/session/\tdata\fstdpath\afn\bvim\1\0\5%auto_session_enable_last_session\1\25auto_restore_enabled\1\25auto_session_enabled\2\22auto_save_enabled\1\14log_level\tinfo\0" },
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/auto-session",
     url = "https://github.com/rmagatti/auto-session"
@@ -139,7 +124,7 @@ _G.packer_plugins = {
     url = "https://github.com/famiu/bufdelete.nvim"
   },
   ["bufferline.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15bufferline\frequire\0" },
+    config = { "\27LJ\2\nã\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\2\18close_command\16Bdelete! %d\23left_mouse_command\16Bdelete! %d\nsetup\15bufferline\frequire\0" },
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
@@ -168,6 +153,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  edge = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/edge",
+    url = "https://github.com/sainnhe/edge"
   },
   everforest = {
     loaded = true,
@@ -214,13 +206,12 @@ _G.packer_plugins = {
     url = "https://github.com/lukas-reineke/headlines.nvim"
   },
   ["impatient.nvim"] = {
-    config = { "\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0" },
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\nî\a\0\0\4\0\24\00046\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0'\2\4\0B\0\2\0016\0\0\0009\0\3\0'\2\5\0B\0\2\0016\0\0\0009\0\3\0'\2\6\0B\0\2\0016\0\0\0009\0\3\0'\2\a\0B\0\2\0016\0\0\0009\0\3\0'\2\b\0B\0\2\0016\0\0\0009\0\3\0'\2\t\0B\0\2\0016\0\0\0009\0\1\0+\1\2\0=\1\n\0006\0\0\0009\0\1\0009\0\v\0\18\2\0\0009\0\f\0'\3\r\0B\0\3\0016\0\14\0'\2\15\0B\0\2\0029\0\16\0005\2\17\0005\3\18\0=\3\19\0025\3\20\0=\3\21\0025\3\22\0=\3\23\2B\0\2\1K\0\1\0\24char_highlight_list\1\a\0\0\27IndentBlanklineIndent1\27IndentBlanklineIndent2\27IndentBlanklineIndent3\27IndentBlanklineIndent4\27IndentBlanklineIndent5\27IndentBlanklineIndent6\20buftype_exclude\1\2\0\0\rterminal\21filetype_exclude\1\2\0\0\14dashboard\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\feol:‚Ü¥\vappend\14listchars\tlistAhighlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombineAhighlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombineAhighlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombineAhighlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombineAhighlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombineAhighlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine\bcmd\18termguicolors\bopt\bvim\0" },
+    config = { "\27LJ\2\n¢\a\0\0\4\0\24\00046\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\3\0'\2\4\0B\0\2\0016\0\0\0009\0\3\0'\2\5\0B\0\2\0016\0\0\0009\0\3\0'\2\6\0B\0\2\0016\0\0\0009\0\3\0'\2\a\0B\0\2\0016\0\0\0009\0\3\0'\2\b\0B\0\2\0016\0\0\0009\0\3\0'\2\t\0B\0\2\0016\0\0\0009\0\1\0+\1\2\0=\1\n\0006\0\0\0009\0\1\0009\0\v\0\18\2\0\0009\0\f\0'\3\r\0B\0\3\0016\0\14\0'\2\15\0B\0\2\0029\0\16\0005\2\17\0005\3\18\0=\3\19\0025\3\20\0=\3\21\0025\3\22\0=\3\23\2B\0\2\1K\0\1\0\24char_highlight_list\1\a\0\0\27IndentBlanklineIndent1\27IndentBlanklineIndent2\27IndentBlanklineIndent3\27IndentBlanklineIndent4\27IndentBlanklineIndent5\27IndentBlanklineIndent6\20buftype_exclude\1\2\0\0\rterminal\21filetype_exclude\1\3\0\0\14dashboard\18lsp-installer\1\0\1\25space_char_blankline\6 \nsetup\21indent_blankline\frequire\feol:‚Ü¥\vappend\14listchars\tlistAhighlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombineAhighlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombineAhighlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombineAhighlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombineAhighlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombineAhighlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine\bcmd\18termguicolors\bopt\bvim\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -261,7 +252,7 @@ _G.packer_plugins = {
     url = "https://github.com/junegunn/limelight.vim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\2\n\\\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\vgithub\nsetup\flualine\frequire\0" },
+    config = { "\27LJ\2\nZ\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -302,7 +293,7 @@ _G.packer_plugins = {
     url = "https://github.com/neomake/neomake"
   },
   neorg = {
-    config = { "\27LJ\2\n‰\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\thome\17~/notes/home\twork\17~/notes/work\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
+    config = { "\27LJ\2\n‰\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\21core.norg.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\twork\17~/notes/work\thome\17~/notes/home\24core.norg.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
     loaded = false,
     needs_bufread = true,
     only_cond = false,
@@ -311,10 +302,8 @@ _G.packer_plugins = {
   },
   ["neoscroll.nvim"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim",
+    loaded = true,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
   neovim = {
@@ -431,12 +420,6 @@ _G.packer_plugins = {
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23treesitter-context\frequire\0" },
-    loaded = true,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
-    url = "https://github.com/romgrk/nvim-treesitter-context"
-  },
   ["nvim-treesitter-endwise"] = {
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise",
@@ -453,6 +436,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["nvim-window.git"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/nvim-window.git",
+    url = "https://gitlab.com/yorickpeterse/nvim-window"
   },
   ["onedark.vim"] = {
     loaded = false,
@@ -501,6 +491,20 @@ _G.packer_plugins = {
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/popfix",
     url = "https://github.com/RishabhRD/popfix"
   },
+  ["pretty-fold.nvim"] = {
+    config = { "\27LJ\2\n@\0\0\4\0\6\0\a6\0\0\0009\0\1\0'\2\2\0006\3\3\0009\3\4\0039\3\5\3D\0\3\0\14foldlevel\6v\bvim\6*\brep\vstringÊ\2\1\0\6\0\17\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\6\0005\4\4\0003\5\5\0>\5\2\4=\4\a\0035\4\b\0=\4\t\3=\3\n\0025\3\v\0005\4\f\0=\4\r\3=\3\14\2B\0\2\0016\0\0\0'\2\15\0B\0\2\0029\0\2\0005\2\16\0B\0\2\1K\0\1\0\1\0\1\vborder\vsingle\24pretty-fold.preview\vconfig\vborder\1\t\0\0\6 \5\6 \6 \6 \6 \6 \6 \1\0\1\bkey\6h\rsections\nright\1\6\0\0\t‚î´ \27number_of_folded_lines\a: \15percentage\15 ‚î£‚îÅ‚îÅ\tleft\1\0\0\0\1\6\0\0\t‚îÅ \0\f ‚îÅ‚î´\fcontent\b‚î£\1\0\2\21keep_indentation\1\14fill_char\b‚îÅ\nsetup\16pretty-fold\frequire\0" },
+    loaded = true,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
+    url = "https://github.com/anuvyklack/pretty-fold.nvim"
+  },
+  ["sidebar.nvim"] = {
+    config = { "\27LJ\2\nå\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\fsymbols\1\0\1\ticon\a∆í\rsections\1\0\0\1\5\0\0\rdatetime\bgit\fsymbols\ntodos\nsetup\17sidebar-nvim\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/sidebar.nvim",
+    url = "https://github.com/sidebar-nvim/sidebar.nvim"
+  },
   sniprun = {
     config = { "\27LJ\2\nç\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\20display_options\1\0\1\25notification_timeout\3\n\fdisplay\1\0\0\1\2\0\0\15NvimNotify\nsetup\fsniprun\frequire\0" },
     loaded = false,
@@ -526,6 +530,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/sqlite.lua",
     url = "https://github.com/tami5/sqlite.lua"
+  },
+  ["substitute.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15substitute\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/substitute.nvim",
+    url = "https://github.com/gbprod/substitute.nvim"
   },
   tabular = {
     after_files = { "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/tabular/after/plugin/TabularMaps.vim" },
@@ -558,6 +570,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["train.nvim"] = {
     loaded = false,
@@ -670,26 +689,12 @@ _G.packer_plugins = {
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
   },
-  vimpeccable = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimpeccable",
-    url = "https://github.com/svermeulen/vimpeccable"
-  },
   vimtex = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
     path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  ["winshift.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/caoyu/.local/share/nvim/site/pack/packer/opt/winshift.nvim",
-    url = "https://github.com/sindrets/winshift.nvim"
   },
   ["zen-mode.nvim"] = {
     config = { "\27LJ\2\n\\\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\vwindow\1\0\0\1\0\1\nwidth\4\0ÄÄ†ˇ\3\nsetup\rzen-mode\frequire\0" },
@@ -702,50 +707,34 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neovim-session-manager
-time([[Config for neovim-session-manager]], true)
-try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\18autoload_mode\1\nsetup\20session_manager\frequire\0", "config", "neovim-session-manager")
-time([[Config for neovim-session-manager]], false)
--- Config for: nvim-treesitter-context
-time([[Config for nvim-treesitter-context]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23treesitter-context\frequire\0", "config", "nvim-treesitter-context")
-time([[Config for nvim-treesitter-context]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\ny\0\0\2\1\5\1\0156\0\0\0009\0\1\0009\0\2\0B\0\1\2\b\0\0\0X\0\5Ä6\0\0\0009\0\1\0009\0\3\0D\0\1\0X\0\3Ä-\0\0\0009\0\4\0D\0\1\0K\0\1\0\1¿\17autopairs_cr\24coc#_select_confirm\15pumvisible\afn\bvim\0¸\1\1\0\b\0\15\0\0236\0\0\0009\0\1\0009\0\2\0006\1\3\0'\3\4\0B\1\2\0029\2\5\0015\4\6\0B\2\2\0016\2\a\0004\3\0\0=\3\b\0026\2\b\0003\3\n\0=\3\t\2\18\2\0\0'\4\v\0'\5\f\0'\6\r\0005\a\14\0B\2\5\0012\0\0ÄK\0\1\0\1\0\2\fnoremap\2\texpr\2&v:lua.MUtils.completion_confirm()\t<CR>\6i\0\23completion_confirm\vMUtils\a_G\1\0\1\vmap_cr\1\nsetup\19nvim-autopairs\frequire\20nvim_set_keymap\bapi\bvim\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
-time([[Config for bufferline.nvim]], false)
--- Config for: nvim-peekup
-time([[Config for nvim-peekup]], true)
-try_loadstring("\27LJ\2\nW\0\0\3\0\5\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\1\4\0=\1\3\0K\0\1\0\n100ms\ndelay\17on_keystroke\23nvim-peekup.config\frequire\0", "config", "nvim-peekup")
-time([[Config for nvim-peekup]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\2\n\\\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\vgithub\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: org-bullets.nvim
-time([[Config for org-bullets.nvim]], true)
-try_loadstring("\27LJ\2\nd\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fsymbols\1\0\0\1\5\0\0\b‚óâ\b‚óã\b‚ú∏\b‚úø\nsetup\16org-bullets\frequire\0", "config", "org-bullets.nvim")
-time([[Config for org-bullets.nvim]], false)
--- Config for: auto-session
-time([[Config for auto-session]], true)
-try_loadstring("\27LJ\2\nâ\2\0\0\4\0\n\0\0165\0\0\0006\1\1\0009\1\2\0019\1\3\1'\3\4\0B\1\2\2'\2\5\0&\1\2\1=\1\6\0006\1\a\0'\3\b\0B\1\2\0029\1\t\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\17auto-session\frequire\26auto_session_root_dir\14/session/\tdata\fstdpath\afn\bvim\1\0\5\22auto_save_enabled\2%auto_session_enable_last_session\1\25auto_restore_enabled\1\14log_level\tinfo\25auto_session_enabled\2\0", "config", "auto-session")
-time([[Config for auto-session]], false)
--- Config for: nvim-lastplace
-time([[Config for nvim-lastplace]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-lastplace\frequire\0", "config", "nvim-lastplace")
-time([[Config for nvim-lastplace]], false)
 -- Config for: spellsitter.nvim
 time([[Config for spellsitter.nvim]], true)
 try_loadstring("\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\venable\2\nsetup\16spellsitter\frequire\0", "config", "spellsitter.nvim")
 time([[Config for spellsitter.nvim]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14impatient\frequire\0", "config", "impatient.nvim")
-time([[Config for impatient.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\2\nZ\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\1\ntheme\tauto\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
+-- Config for: nvim-lastplace
+time([[Config for nvim-lastplace]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-lastplace\frequire\0", "config", "nvim-lastplace")
+time([[Config for nvim-lastplace]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0", "config", "neoscroll.nvim")
+time([[Config for neoscroll.nvim]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\nâ\2\0\0\4\0\n\0\0165\0\0\0006\1\1\0009\1\2\0019\1\3\1'\3\4\0B\1\2\2'\2\5\0&\1\2\1=\1\6\0006\1\a\0'\3\b\0B\1\2\0029\1\t\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\17auto-session\frequire\26auto_session_root_dir\14/session/\tdata\fstdpath\afn\bvim\1\0\5%auto_session_enable_last_session\1\25auto_restore_enabled\1\25auto_session_enabled\2\22auto_save_enabled\1\14log_level\tinfo\0", "config", "auto-session")
+time([[Config for auto-session]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\ny\0\0\2\1\5\1\0156\0\0\0009\0\1\0009\0\2\0B\0\1\2\b\0\0\0X\0\5Ä6\0\0\0009\0\1\0009\0\3\0D\0\1\0X\0\3Ä-\0\0\0009\0\4\0D\0\1\0K\0\1\0\1¿\17autopairs_cr\24coc#_select_confirm\15pumvisible\afn\bvim\0¸\1\1\0\b\0\15\0\0236\0\0\0009\0\1\0009\0\2\0006\1\3\0'\3\4\0B\1\2\0029\2\5\0015\4\6\0B\2\2\0016\2\a\0004\3\0\0=\3\b\0026\2\b\0003\3\n\0=\3\t\2\18\2\0\0'\4\v\0'\5\f\0'\6\r\0005\a\14\0B\2\5\0012\0\0ÄK\0\1\0\1\0\2\fnoremap\2\texpr\2&v:lua.MUtils.completion_confirm()\t<CR>\6i\0\23completion_confirm\vMUtils\a_G\1\0\1\vmap_cr\1\nsetup\19nvim-autopairs\frequire\20nvim_set_keymap\bapi\bvim\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-peekup
+time([[Config for nvim-peekup]], true)
+try_loadstring("\27LJ\2\nW\0\0\3\0\5\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\1\4\0=\1\3\0K\0\1\0\n100ms\ndelay\17on_keystroke\23nvim-peekup.config\frequire\0", "config", "nvim-peekup")
+time([[Config for nvim-peekup]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\nù\2\0\0\5\0\17\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\a\0025\3\14\0005\4\r\0=\4\15\3=\3\16\2B\0\2\1K\0\1\0\factions\14open_file\1\0\0\1\0\2\18resize_window\1\17quit_on_open\1\1\0\1\nwidth\3\30\bgit\1\0\2\vignore\2\venable\2\ffilters\1\0\1\rdotfiles\2\tview\1\0\1\21hide_root_folder\1\15auto_close\tture\1\0\1\20show_on_startup\2\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
@@ -754,21 +743,39 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for cutlass.nvim]], true)
 try_loadstring("\27LJ\2\nF\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\fcut_key\6c\nsetup\fcutlass\frequire\0", "config", "cutlass.nvim")
 time([[Config for cutlass.nvim]], false)
+-- Config for: org-bullets.nvim
+time([[Config for org-bullets.nvim]], true)
+try_loadstring("\27LJ\2\nd\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fsymbols\1\0\0\1\5\0\0\b‚óâ\b‚óã\b‚ú∏\b‚úø\nsetup\16org-bullets\frequire\0", "config", "org-bullets.nvim")
+time([[Config for org-bullets.nvim]], false)
+-- Config for: neovim-session-manager
+time([[Config for neovim-session-manager]], true)
+try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\18autoload_mode\1\nsetup\20session_manager\frequire\0", "config", "neovim-session-manager")
+time([[Config for neovim-session-manager]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+try_loadstring("\27LJ\2\nã\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\foptions\1\0\0\1\0\2\18close_command\16Bdelete! %d\23left_mouse_command\16Bdelete! %d\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
+time([[Config for bufferline.nvim]], false)
+-- Config for: pretty-fold.nvim
+time([[Config for pretty-fold.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\4\0\6\0\a6\0\0\0009\0\1\0'\2\2\0006\3\3\0009\3\4\0039\3\5\3D\0\3\0\14foldlevel\6v\bvim\6*\brep\vstringÊ\2\1\0\6\0\17\0\0256\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\6\0005\4\4\0003\5\5\0>\5\2\4=\4\a\0035\4\b\0=\4\t\3=\3\n\0025\3\v\0005\4\f\0=\4\r\3=\3\14\2B\0\2\0016\0\0\0'\2\15\0B\0\2\0029\0\2\0005\2\16\0B\0\2\1K\0\1\0\1\0\1\vborder\vsingle\24pretty-fold.preview\vconfig\vborder\1\t\0\0\6 \5\6 \6 \6 \6 \6 \6 \1\0\1\bkey\6h\rsections\nright\1\6\0\0\t‚î´ \27number_of_folded_lines\a: \15percentage\15 ‚î£‚îÅ‚îÅ\tleft\1\0\0\0\1\6\0\0\t‚îÅ \0\f ‚îÅ‚î´\fcontent\b‚î£\1\0\2\21keep_indentation\1\14fill_char\b‚îÅ\nsetup\16pretty-fold\frequire\0", "config", "pretty-fold.nvim")
+time([[Config for pretty-fold.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType ipynb ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim', 'latexindent.pl', 'nabla.nvim', 'jupytext.vim', 'tagbar', 'vim-markdown'}, { ft = "ipynb" }, _G.packer_plugins)]]
-vim.cmd [[au FileType org ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim', 'latexindent.pl', 'nabla.nvim', 'tagbar'}, { ft = "org" }, _G.packer_plugins)]]
-vim.cmd [[au FileType python ++once lua require("packer.load")({'tagbar'}, { ft = "python" }, _G.packer_plugins)]]
 vim.cmd [[au FileType csv ++once lua require("packer.load")({'csv.vim'}, { ft = "csv" }, _G.packer_plugins)]]
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vimtex', 'glow.nvim', 'tex-conceal.vim', 'latexindent.pl', 'nabla.nvim', 'jupytext.vim', 'tagbar', 'vim-markdown'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType tex ++once lua require("packer.load")({'vimtex', 'tex-conceal.vim', 'latexindent.pl', 'nabla.nvim', 'jupytext.vim', 'tagbar', 'vim-markdown'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-table-mode', 'vimtex', 'glow.nvim', 'zen-mode.nvim', 'latexindent.pl', 'tagbar', 'nabla.nvim', 'tabular', 'tex-conceal.vim', 'vim-markdown', 'coc.nvim', 'jupytext.vim', 'nvim-scrollbar'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'vim-table-mode', 'vimtex', 'zen-mode.nvim', 'latexindent.pl', 'tagbar', 'nabla.nvim', 'tabular', 'tex-conceal.vim', 'vim-markdown', 'coc.nvim', 'jupytext.vim', 'nvim-scrollbar'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType ipynb ++once lua require("packer.load")({'vim-table-mode', 'vimtex', 'zen-mode.nvim', 'latexindent.pl', 'tagbar', 'nabla.nvim', 'tabular', 'tex-conceal.vim', 'vim-markdown', 'coc.nvim', 'jupytext.vim', 'nvim-scrollbar'}, { ft = "ipynb" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'coc.nvim'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType org ++once lua require("packer.load")({'vim-table-mode', 'vimtex', 'zen-mode.nvim', 'latexindent.pl', 'tagbar', 'nabla.nvim', 'tabular', 'tex-conceal.vim', 'coc.nvim', 'nvim-scrollbar'}, { ft = "org" }, _G.packer_plugins)]]
+vim.cmd [[au FileType json ++once lua require("packer.load")({'tabular', 'coc.nvim'}, { ft = "json" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'zen-mode.nvim', 'tagbar', 'DAPInstall.nvim', 'nvim-dap', 'nvim-dap-python', 'nvim-dap-ui', 'coc.nvim', 'nvim-scrollbar'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufAdd * ++once lua require("packer.load")({'vim-repeat', 'neorg', 'vim-snippets', 'vim-startify', 'vim-surround', 'nvim-lspconfig', 'vim-visual-multi', 'nvim-dap-ui', 'winshift.nvim', 'nvim-hlslens', 'zen-mode.nvim', 'bufdelete.nvim', 'coc.nvim', 'nvim-ts-rainbow', 'onedark.vim', 'sniprun', 'vim', 'gruvbox-material', 'sonokai', 'JABS.nvim', 'indent-blankline.nvim', 'SimpylFold', 'tabular', 'vimpeccable', 'TrueZen.nvim', 'nvim-dap-python', 'onedarkpro.nvim', 'Comment.nvim', 'limelight.vim', 'nvim-dap', 'train.nvim', 'nord-vim', 'nvim-scrollbar', 'material.nvim', 'playground', 'vim-be-good', 'monokai_transparent', 'leetcode.vim', 'vim-code-dark', 'vim-table-mode', 'vim-devicons', 'neoformat', 'ayu-vim', 'vim-easy-align', 'neomake', 'vim-illuminate', 'neoscroll.nvim', 'DAPInstall.nvim', 'neovim', 'vim-monokai'}, { event = "BufAdd *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-repeat', 'neorg', 'vim-snippets', 'vim-startify', 'vim-surround', 'nvim-lspconfig', 'vim-visual-multi', 'nvim-dap-ui', 'winshift.nvim', 'nvim-hlslens', 'zen-mode.nvim', 'bufdelete.nvim', 'coc.nvim', 'nvim-ts-rainbow', 'onedark.vim', 'sniprun', 'vim', 'gruvbox-material', 'sonokai', 'JABS.nvim', 'indent-blankline.nvim', 'SimpylFold', 'tabular', 'vimpeccable', 'TrueZen.nvim', 'nvim-dap-python', 'onedarkpro.nvim', 'Comment.nvim', 'limelight.vim', 'nvim-dap', 'train.nvim', 'nord-vim', 'nvim-scrollbar', 'material.nvim', 'playground', 'vim-be-good', 'monokai_transparent', 'leetcode.vim', 'vim-code-dark', 'vim-table-mode', 'vim-devicons', 'neoformat', 'ayu-vim', 'vim-easy-align', 'neomake', 'vim-illuminate', 'neoscroll.nvim', 'DAPInstall.nvim', 'neovim', 'vim-monokai'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'edge', 'neorg', 'nvim-ts-rainbow', 'vim-table-mode', 'vim-visual-multi', 'onedarkpro.nvim', 'zen-mode.nvim', 'gruvbox-material', 'indent-blankline.nvim', 'sidebar.nvim', 'leetcode.vim', 'sonokai', 'limelight.vim', 'monokai_transparent', 'tabular', 'neoformat', 'neomake', 'playground', 'neovim', 'tokyonight.nvim', 'train.nvim', 'sniprun', 'Comment.nvim', 'onedark.vim', 'vim-code-dark', 'DAPInstall.nvim', 'vim-devicons', 'vim-easy-align', 'nvim-dap', 'TrueZen.nvim', 'vim-illuminate', 'vim', 'nvim-dap-ui', 'nvim-hlslens', 'vim-monokai', 'vim-repeat', 'substitute.nvim', 'vim-startify', 'vim-snippets', 'coc.nvim', 'nvim-lspconfig', 'vim-be-good', 'vim-surround', 'nvim-scrollbar', 'ayu-vim', 'nord-vim', 'material.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufAdd * ++once lua require("packer.load")({'edge', 'neorg', 'nvim-ts-rainbow', 'nvim-window.git', 'vim-table-mode', 'vim-visual-multi', 'onedarkpro.nvim', 'zen-mode.nvim', 'gruvbox-material', 'indent-blankline.nvim', 'sidebar.nvim', 'leetcode.vim', 'sonokai', 'limelight.vim', 'monokai_transparent', 'tabular', 'neoformat', 'neomake', 'playground', 'neovim', 'tokyonight.nvim', 'train.nvim', 'sniprun', 'Comment.nvim', 'onedark.vim', 'vim-code-dark', 'DAPInstall.nvim', 'vim-devicons', 'vim-easy-align', 'nvim-dap', 'TrueZen.nvim', 'vim-illuminate', 'vim', 'nvim-dap-ui', 'nvim-hlslens', 'vim-monokai', 'bufdelete.nvim', 'vim-repeat', 'substitute.nvim', 'vim-startify', 'vim-snippets', 'coc.nvim', 'nvim-lspconfig', 'vim-be-good', 'vim-surround', 'nvim-scrollbar', 'ayu-vim', 'nord-vim', 'material.nvim'}, { event = "BufAdd *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
@@ -781,12 +788,12 @@ time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/pac
 time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], true)
 vim.cmd [[source /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]]
 time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim]], false)
-time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]], true)
-vim.cmd [[source /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]]
-time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]], false)
 time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], true)
 vim.cmd [[source /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]]
 time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim]], false)
+time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]], true)
+vim.cmd [[source /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]]
+time([[Sourcing ftdetect script at: /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

@@ -7,7 +7,7 @@
 --            ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝		  --
 --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
 
--- require('impatient')
+require('impatient')
 require('plugins')
 require('bubbles')
 require('mappings')

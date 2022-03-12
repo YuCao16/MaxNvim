@@ -10,9 +10,9 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-edit lua/mappings.lua
+edit ~/.config/nvim/lua/vimplug_settings.lua
 argglobal
-balt lua/mappings.lua
+balt ~/mil_test/test.org
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -23,19 +23,17 @@ setlocal fdn=20
 setlocal nofen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 29 - ((17 * winheight(0) + 17) / 35)
+let s:l = 235 - ((33 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 29
-normal! 033|
+keepjumps 235
+normal! 034|
 tabnext 1
-badd +0 lua/mappings.lua
-badd +63 settings.vim
-badd +21 lua/autocmd.lua
-badd +179 lua/load_plugins.lua
-badd +259 lua/plugins.lua
-badd +120 lua/vimplug_settings.lua
+badd +23 lua/plugins.lua
+badd +44 ~/mil_test/test.org
+badd +266 ~/mil_public/VimProject/test_split/wont_giveup_thread.py
+badd +0 ~/.config/nvim/lua/vimplug_settings.lua
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif

@@ -1,13 +1,9 @@
 {
-  "python.jediEnabled": false,
-  "pyright.disableDiagnostics":false,
-  "python.linting.flake8Enabled":false,
   "coc.preferences.willSaveHandlerTimeout": 2000,
   "signature.floatConfig": {"border": true},
   "suggest.floatConfig": {"border": true},
   "hover.floatConfig": {"border": true},
   "pyright.enable": true,
-  "diagnostic.floatConfig": true,
   "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
   "snippets.userSnippetsDirectory":"~/.config/nvim/UltiSnips",
   "coc.preferences.formatOnType": true,
@@ -15,6 +11,12 @@
   "python.formatting.provider":"black",
   "python.sortImports.path":"/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/isort",
   "coc.source.vimtex.filetypes":["tex","plaintex","latex","markdown","*.ipynb"],
+  "Lua.diagnostics.enable":false,
+  "cSpell.enabledLanguageIds": [
+  	"latex",
+  	"markdown",
+  	"text"
+  ],
   // be careful not to condense the hierarchy as it breaks pyls
   "languageserver": {
     "python": {
@@ -84,4 +86,4 @@
         }
       }
     }
-  }
+  }}

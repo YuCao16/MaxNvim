@@ -222,7 +222,16 @@ g["peekup_open"] = '"'
 -- "=====================================================
 -- "" Tex-Conceal.vim settings
 -- "=====================================================
-cmd([[set conceallevel=1]])
+cmd([[set conceallevel=2]])
+cmd([[set concealcursor=nc]])
+g['tex_superscripts'] = "[0-9a-zA-W.,:;+-<>/()=]"
+g['tex_subscripts'] = "[0-9aehijklmnoprstuvx,+-/().]"
 g["tex_conceal"] = "abdmg"
 g["tex_flavor"] = "latex"
 cmd([[hi Conceal ctermbg=none]])
+
+-- "=====================================================
+-- "" everforest settings
+-- "=====================================================
+g['everforest_background'] = "hard"
+g['gruvbox_materiala_background'] = "hard"
