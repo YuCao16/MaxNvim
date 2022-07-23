@@ -1278,3 +1278,200 @@ times in msec
 122.006  000.001: before starting main loop
 132.499  010.493: first screen update
 132.504  000.005: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.361  000.352: locale set
+007.544  007.183: inits 1
+007.580  000.036: window checked
+010.695  003.115: parsing arguments
+011.093  000.398: expanding arguments
+011.191  000.098: inits 2
+011.623  000.432: init highlight
+011.623  000.001: waiting for UI
+013.264  001.640: done waiting for UI
+013.271  000.007: init screen for UI
+013.294  000.024: init default mappings
+013.359  000.065: init default autocommands
+024.623  000.096  000.096: sourcing /Users/caoyu/.config/nvim/settings.vim
+031.680  018.210  018.114: sourcing /Users/caoyu/.config/nvim/init.lua
+031.688  000.119: sourcing vimrc file(s)
+035.726  000.010  000.010: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/cooklang.vim
+035.764  000.008  000.008: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/fusion.vim
+035.800  000.009  000.009: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdresource.vim
+035.837  000.007  000.007: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gdscript.vim
+035.871  000.007  000.007: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/glimmer.vim
+035.903  000.008  000.008: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/glsl.vim
+035.941  000.008  000.008: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/gowork.vim
+035.980  000.013  000.013: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/graphql.vim
+036.018  000.013  000.013: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hack.vim
+036.057  000.016  000.016: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hcl.vim
+036.090  000.009  000.009: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/heex.vim
+036.123  000.009  000.009: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/hjson.vim
+036.157  000.010  000.010: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/json5.vim
+036.193  000.012  000.012: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/ledger.vim
+036.235  000.015  000.015: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/nix.vim
+036.275  000.016  000.016: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/prisma.vim
+036.312  000.011  000.011: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/pug.vim
+036.352  000.017  000.017: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/ql.vim
+036.393  000.017  000.017: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/query.vim
+036.435  000.012  000.012: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/surface.vim
+036.471  000.012  000.012: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/teal.vim
+036.514  000.020  000.020: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/tlaplus.vim
+036.551  000.013  000.013: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/ftdetect/yang.vim
+036.653  000.015  000.015: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/orgmode/ftdetect/org.vim
+036.690  000.013  000.013: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/orgmode/ftdetect/org_archive.vim
+036.945  000.033  000.033: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/orgmode/ftdetect/filetype.lua
+037.010  005.157  004.822: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/filetype.vim
+037.161  000.022  000.022: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/ftplugin.vim
+037.332  000.021  000.021: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/indent.vim
+037.681  000.166  000.166: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/syntax/synload.vim
+037.737  000.369  000.203: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/syntax/syntax.vim
+038.992  000.113  000.113: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/gzip.vim
+039.028  000.008  000.008: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/health.vim
+039.088  000.036  000.036: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/man.vim
+039.590  000.116  000.116: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+039.683  000.571  000.455: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/matchit.vim
+039.806  000.098  000.098: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/matchparen.vim
+040.050  000.219  000.219: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/netrwPlugin.vim
+040.204  000.010  000.010: sourcing /Users/caoyu/.local/share/nvim/rplugin.vim
+040.208  000.127  000.117: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/rplugin.vim
+040.303  000.062  000.062: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/shada.vim
+040.354  000.021  000.021: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/spellfile.vim
+040.477  000.090  000.090: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/tarPlugin.vim
+040.581  000.074  000.074: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/tohtml.vim
+040.662  000.021  000.021: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/tutor.vim
+040.810  000.103  000.103: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/plugin/zipPlugin.vim
+045.170  000.116  000.116: sourcing /opt/homebrew/Cellar/neovim/0.6.1/share/nvim/runtime/autoload/provider/clipboard.vim
+051.294  000.018  000.018: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim
+051.367  000.034  000.034: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim
+051.422  000.019  000.019: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim
+051.470  000.017  000.017: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim
+051.516  000.015  000.015: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim
+051.518  010.537  010.318: sourcing /Users/caoyu/.config/nvim/plugin/packer_compiled.lua
+051.903  002.568: loading rtp plugins
+052.427  000.127  000.127: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/animate.vim/plugin/animate.vim
+052.696  000.097  000.097: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/auto-session/plugin/auto-session.vim
+053.103  000.122  000.122: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.vim
+053.365  000.044  000.044: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+053.796  000.086  000.086: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/lens.vim/plugin/lens.vim
+054.086  000.041  000.041: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/neovim-session-manager/plugin/session_manager.vim
+054.359  000.014  000.014: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-code-action-menu/plugin/code_action_menu.vim
+054.617  000.052  000.052: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+054.868  000.039  000.039: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-peekup/plugin/nvim-peekup.vim
+055.441  000.372  000.372: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.vim
+055.773  000.064  000.064: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise/plugin/nvim-treesitter-endwise.lua
+055.906  000.023  000.023: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+056.169  000.016  000.016: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/orgmode/plugin/orgmode.vim
+056.394  000.024  000.024: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+056.582  000.023  000.023: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/popfix/plugin/popfix.vim
+056.958  000.082  000.082: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.vim
+057.164  000.034  000.034: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/toggleterm.nvim/plugin/toggleterm.vim
+057.403  000.078  000.078: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/vim-highlightedyank/plugin/highlightedyank.vim
+057.523  004.283: loading packages
+057.558  000.035: loading after plugins
+057.566  000.008: inits 3
+059.896  002.330: reading ShaDa
+060.004  000.108: opening buffers
+060.088  000.084: BufEnter autocommands
+060.090  000.001: editing files in windows
+061.249  000.116  000.116: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard.vim
+061.397  000.025  000.025: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/utils.vim
+061.610  000.084  000.084: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/section.vim
+063.548  000.048  000.048: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/syntax/dashboard.vim
+064.116  003.753: VimEnter autocommands
+064.117  000.001: UIEnter autocommands
+064.118  000.001: before starting main loop
+065.670  001.552: first screen update
+065.672  000.001: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.004  000.004: --- NVIM STARTING ---
+000.277  000.273: locale set
+005.429  005.152: inits 1
+005.453  000.024: window checked
+005.456  000.003: parsing arguments
+007.461  002.006: expanding arguments
+007.518  000.057: inits 2
+007.922  000.404: init highlight
+007.923  000.001: waiting for UI
+009.560  001.637: done waiting for UI
+009.568  000.008: init screen for UI
+009.589  000.021: init default mappings
+009.623  000.035: init default autocommands
+010.903  000.056  000.056: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/ftplugin.vim
+011.107  000.030  000.030: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/indent.vim
+023.458  000.101  000.101: sourcing /Users/caoyu/.config/nvim/settings.vim
+031.034  019.838  019.737: sourcing /Users/caoyu/.config/nvim/init.lua
+031.042  001.495: sourcing vimrc file(s)
+031.347  000.021  000.021: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/filetype.lua
+035.673  004.280  004.280: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/filetype.vim
+035.962  000.055  000.055: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/syntax/synload.vim
+036.021  000.281  000.226: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/syntax/syntax.vim
+037.432  000.113  000.113: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/gzip.vim
+037.473  000.012  000.012: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/health.vim
+037.540  000.036  000.036: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/man.vim
+038.072  000.127  000.127: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+038.171  000.604  000.478: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/matchit.vim
+038.311  000.113  000.113: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/matchparen.vim
+038.551  000.213  000.213: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/netrwPlugin.vim
+038.703  000.007  000.007: sourcing /Users/caoyu/.local/share/nvim/rplugin.vim
+038.707  000.123  000.116: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/rplugin.vim
+038.787  000.049  000.049: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/shada.vim
+038.835  000.016  000.016: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/spellfile.vim
+038.936  000.069  000.069: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tarPlugin.vim
+039.024  000.058  000.058: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tohtml.vim
+039.076  000.015  000.015: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tutor.vim
+039.210  000.104  000.104: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/zipPlugin.vim
+051.658  000.130  000.130: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/autoload/provider/clipboard.vim
+052.486  000.012  000.012: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/csv.vim/ftdetect/csv.vim
+052.547  000.024  000.024: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim
+052.617  000.013  000.013: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/cls.vim
+052.671  000.012  000.012: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tex.vim
+052.713  000.011  000.011: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/opt/vimtex/ftdetect/tikz.vim
+052.716  013.386  013.184: sourcing /Users/caoyu/.config/nvim/plugin/packer_compiled.lua
+053.111  002.577: loading rtp plugins
+053.653  000.108  000.108: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/animate.vim/plugin/animate.vim
+053.929  000.095  000.095: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/auto-session/plugin/auto-session.vim
+054.650  000.322  000.322: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/copilot.vim/autoload/copilot.vim
+054.955  000.797  000.475: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/copilot.vim/plugin/copilot.vim
+055.243  000.052  000.052: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dap-buddy.nvim/plugin/dap-buddy.vim
+055.523  000.107  000.107: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.vim
+055.773  000.041  000.041: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim/plugin/fix_cursorhold_nvim.vim
+056.209  000.101  000.101: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/lens.vim/plugin/lens.vim
+056.582  000.070  000.070: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/neovim-session-manager/plugin/session_manager.lua
+056.789  000.009  000.009: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-code-action-menu/plugin/code_action_menu.vim
+057.091  000.051  000.051: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/plugin/nvim-lsp-installer.vim
+057.329  000.035  000.035: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-peekup/plugin/nvim-peekup.vim
+058.004  000.406  000.406: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter/plugin/nvim-treesitter.lua
+058.294  000.117  000.117: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter-endwise/plugin/nvim-treesitter-endwise.lua
+058.419  000.019  000.019: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+058.684  000.011  000.011: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/orgmode/plugin/orgmode.vim
+058.904  000.021  000.021: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+059.080  000.019  000.019: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/popfix/plugin/popfix.vim
+059.553  000.130  000.130: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/telescope.nvim/plugin/telescope.lua
+059.780  000.080  000.080: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/vim-highlightedyank/plugin/highlightedyank.vim
+059.902  004.522: loading packages
+059.904  000.002: loading after plugins
+059.910  000.006: inits 3
+062.160  002.251: reading ShaDa
+062.293  000.132: opening buffers
+062.416  000.124: BufEnter autocommands
+062.418  000.001: editing files in windows
+062.827  000.084  000.084: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard.vim
+062.953  000.017  000.017: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/utils.vim
+063.157  000.085  000.085: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/section.vim
+065.199  000.048  000.048: sourcing /Users/caoyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim/syntax/dashboard.vim
+065.876  003.225: VimEnter autocommands
+065.877  000.001: UIEnter autocommands
+065.877  000.001: before starting main loop
+067.531  001.654: first screen update
+067.532  000.001: --- NVIM STARTED ---

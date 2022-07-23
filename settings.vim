@@ -141,4 +141,3 @@ function! Show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-

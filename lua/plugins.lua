@@ -9,7 +9,7 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function()
-	use("wbthomason/packer.nvim")
+	use({ "wbthomason/packer.nvim" })
 
 	-- "-------------------=== Basic ===-------------
 	use({
@@ -18,6 +18,7 @@ return require("packer").startup(function()
 		event = { "BufAdd", "InsertEnter" },
 		ft = { "python", "markdown", "tex", "ipynb", "org", "json", "html" },
 	})
+	use({ "github/copilot.vim" })
 	use({ "majutsushi/tagbar", ft = { "python", "markdown", "tex", "ipynb", "org" } })
 	use({
 		"sidebar-nvim/sidebar.nvim",
@@ -42,9 +43,9 @@ return require("packer").startup(function()
 		config = function()
 			require("bufferline").setup({
 				options = {
-					close_command = "Bdelete! %d",
-					left_mouse_command = "Bdelete! %d",
-				}
+					close_command = "Bdelete!",
+					-- left_mouse_command = "Bdelete! %d",
+				},
 			})
 		end,
 	})
@@ -87,7 +88,7 @@ return require("packer").startup(function()
 		config = function()
 			require("nvim-tree").setup({
 				auto_close = ture,
-				show_on_startup = true,
+				-- show_on_startup = true,
 				view = {
 					hide_root_folder = false,
 				},
@@ -134,48 +135,62 @@ return require("packer").startup(function()
 	})
 	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "famiu/bufdelete.nvim", event = { "BufAdd" } })
+	use({ "anuvyklack/nvim-keymap-amend" })
+	use({
+		"anuvyklack/fold-preview.nvim",
+		requires = "anuvyklack/keymap-amend.nvim",
+		config = function()
+			require("fold-preview").setup()
+		end,
+	})
 	use({
 		"anuvyklack/pretty-fold.nvim",
 		config = function()
 			require("pretty-fold").setup({
-				keep_indentation = false,
-				fill_char = "━",
-				sections = {
-					left = {
-						"━ ",
-						function()
-							return string.rep("*", vim.v.foldlevel)
-						end,
-						" ━┫",
-						"content",
-						"┣",
-					},
-					right = {
-						"┫ ",
-						"number_of_folded_lines",
-						": ",
-						"percentage",
-						" ┣━━",
-					},
-				},
-				config = {
-					key = "h", -- 'h', 'l' or nil (if you would like to set your own keybinding)
-
-					-- 'none', "single", "double", "rounded", "solid", 'shadow' or table
-					-- For explanation see: :help nvim_open_win()
-					border = { " ", "", " ", " ", " ", " ", " ", " " },
-				},
-			})
-			require("pretty-fold.preview").setup({
-				border = "single",
+				-- keep_indentation = false,
+				-- fill_char = "━",
+				-- sections = {
+				-- 	left = {
+				-- 		"━ ",
+				-- 		function()
+				-- 			return string.rep("*", vim.v.foldlevel)
+				-- 		end,
+				-- 		" ━┫",
+				-- 		"content",
+				-- 		"┣",
+				-- 	},
+				-- 	right = {
+				-- 		"┫ ",
+				-- 		"number_of_folded_lines",
+				-- 		": ",
+				-- 		"percentage",
+				-- 		" ┣━━",
+				-- 	},
+				-- },
+				-- config = {
+				-- 	key = "h",
+				-- 	border = { " ", "", " ", " ", " ", " ", " ", " " },
+				-- },
 			})
 		end,
 	})
-	use({ "junegunn/fzf" })
-	use({ "junegunn/fzf.vim" }) -- " Search Tools
+	-- use({ "junegunn/fzf" })
+	-- use({ "junegunn/fzf.vim" }) -- " Search Tools
 	use({
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+	use({
+		"nvim-telescope/telescope-file-browser.nvim",
+		config = function()
+			require("telescope").load_extension("file_browser")
+		end,
+	})
+	use({
+		"crispgm/telescope-heading.nvim",
+		config = function()
+			require("telescope").load_extension("heading")
+		end,
 	})
 	use({
 		"Pocco81/TrueZen.nvim",
@@ -331,7 +346,7 @@ return require("packer").startup(function()
 	-- })
 	use({
 		"lewis6991/spellsitter.nvim",
-		-- event = 'BufAdd',
+		ft = { "markdown", "latex" },
 		config = function()
 			require("spellsitter").setup({
 				enable = true,
@@ -377,7 +392,12 @@ return require("packer").startup(function()
 			})
 		end,
 	})
-	use({ "akinsho/toggleterm.nvim" })
+	use({
+		"akinsho/toggleterm.nvim",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 	use({
 		"michaelb/sniprun",
 		run = "bash install.sh",
@@ -396,7 +416,6 @@ return require("packer").startup(function()
 	use({ "honza/vim-snippets", event = { "BufAdd", "InsertEnter" } })
 
 	-- " use 'sirver/ultisnips'
-	-- "use 'Yggdroot/indentLine'
 
 	-- "-------------------=== Debugging navigation ===-------------
 	use({ "mfussenegger/nvim-dap", ft = { "python" }, event = { "BufAdd", "InsertEnter" } })
@@ -408,29 +427,7 @@ return require("packer").startup(function()
 			require("dapui").setup()
 		end,
 	})
-	use({
-		"Pocco81/DAPInstall.nvim",
-		event = { "BufAdd", "InsertEnter" },
-		ft = { "python" },
-		config = function()
-			local dap_install = require("dap-install")
-
-			dap_install.setup({
-				installation_path = vim.fn.stdpath("data") .. "/dapinstall/",
-			})
-
-			local dap, dapui = require("dap"), require("dapui")
-			dap.listeners.after.event_initialized["dapui_config"] = function()
-				dapui.open()
-			end
-			dap.listeners.before.event_terminated["dapui_config"] = function()
-				dapui.close()
-			end
-			dap.listeners.before.event_exited["dapui_config"] = function()
-				dapui.close()
-			end
-		end,
-	})
+	use({ "Pocco81/dap-buddy.nvim" })
 	use({
 		"mfussenegger/nvim-dap-python",
 		ft = { "python" },
@@ -439,6 +436,29 @@ return require("packer").startup(function()
 			require("dap-python").setup("/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9")
 		end,
 	})
+	-- use({
+	-- 	"Pocco81/DAPInstall.nvim",
+	-- 	event = { "BufAdd", "InsertEnter" },
+	-- 	ft = { "python" },
+	-- 	config = function()
+	-- 		local dap_install = require("dap-install")
+	--
+	-- 		dap_install.setup({
+	-- 			installation_path = vim.fn.stdpath("data") .. "/dapinstall/",
+	-- 		})
+	--
+	-- 		local dap, dapui = require("dap"), require("dapui")
+	-- 		dap.listeners.after.event_initialized["dapui_config"] = function()
+	-- 			dapui.open()
+	-- 		end
+	-- 		dap.listeners.before.event_terminated["dapui_config"] = function()
+	-- 			dapui.close()
+	-- 		end
+	-- 		dap.listeners.before.event_exited["dapui_config"] = function()
+	-- 			dapui.close()
+	-- 		end
+	-- 	end,
+	-- })
 
 	-- "-------------------=== Languages support ===-------------------
 	use({ "lervag/vimtex", ft = { "markdown", "tex", "ipynb", "org" } }) -- " LaTex
@@ -452,24 +472,44 @@ return require("packer").startup(function()
 		ft = { "markdown", "tex", "ipynb", "org", "json" },
 		event = { "BufAdd", "InsertEnter" },
 	})
-	use({ "ellisonleao/glow.nvim", ft = { "markdown" } })
-	-- use("vim-pandoc/vim-pandoc")
+	use({ "ellisonleao/glow.nvim", ft = { "markdown" },
+		config = function()
+			require("glow").setup({
+				border = "double",
+			})
+        end,
+	})
 
 	use({ "chrisbra/csv.vim", ft = { "csv" } }) -- " CSV
 
-	use({ "nvim-orgmode/orgmode" }) -- " ORG
-	-- use { 'jceb/vim-orgmode' }
+	use({
+		"nvim-orgmode/orgmode", -- " ORG
+	})
 	use({
 		"akinsho/org-bullets.nvim",
-		-- ft = { "org" },
-		-- after = 'nvim-orgmode/orgmode',
 		config = function()
 			require("org-bullets").setup({
-				symbols = { "◉", "○", "✸", "✿" },
+				concealcursor = true,
+				symbols = {
+					headlines = { "◉", "○", "✸", "✿" },
+					checkboxes = {
+						cancelled = { "", "OrgCancelled" },
+						-- done = { "✓", "OrgDone" },
+						-- todo = { "x", "OrgTODO" },
+						-- todo = { "✗", "OrgTODO" },
+						todo = { "☐", "OrgTODO" },
+						done = { "✓", "OrgDone" },
+					},
+				},
 			})
 		end,
 	})
-	use({ "lukas-reineke/headlines.nvim" })
+	use({
+		"lukas-reineke/headlines.nvim",
+		-- config = function()
+		-- 	require("headlines").setup()
+		-- end,
+	})
 	use({
 		"dhruvasagar/vim-table-mode",
 		ft = { "markdown", "tex", "ipynb", "org" },
@@ -478,6 +518,7 @@ return require("packer").startup(function()
 
 	use({ "goerz/jupytext.vim", ft = { "markdown", "tex", "ipynb" } })
 
+	-- use("vim-pandoc/vim-pandoc")
 	-- "-------------------=== Games ===--------------------------
 	use({ "ThePrimeagen/vim-be-good", event = { "BufAdd", "InsertEnter" } }) --"game
 	use({ "ianding1/leetcode.vim", event = { "BufAdd", "InsertEnter" } })
@@ -494,6 +535,16 @@ return require("packer").startup(function()
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use({
+		"xiyaowong/nvim-transparent",
+		event = {
+			"BufAdd",
+			"InsertEnter",
+			config = function()
+				require("xiyaowong").setup()
+			end,
+		},
+	})
 	use({ "p00f/nvim-ts-rainbow", event = { "BufAdd", "InsertEnter" } })
 	use({ "nvim-treesitter/playground", event = { "BufAdd", "InsertEnter" } })
 
@@ -502,12 +553,13 @@ return require("packer").startup(function()
 
 	-- use({ "projekt0n/github-nvim-theme", commit = "715c554" })
 	use({ "projekt0n/github-nvim-theme" })
+	use({ "joshdick/onedark.vim" })
+	-- use({ "navarasu/onedark.nvim" })
 	use({ "sainnhe/everforest" })
+	use({ "sainnhe/sonokai" })
 	use({ "ayu-theme/ayu-vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "arcticicestudio/nord-vim", event = { "BufAdd", "InsertEnter" } })
-	use({ "joshdick/onedark.vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "dracula/vim", event = { "BufAdd", "InsertEnter" } })
-	use({ "sainnhe/sonokai", event = { "BufAdd", "InsertEnter" } })
 	use({ "sickill/vim-monokai", event = { "BufAdd", "InsertEnter" } })
 	use({ "yucao16/monokai_transparent", event = { "BufAdd", "InsertEnter" } })
 	use({ "tomasiser/vim-code-dark", event = { "BufAdd", "InsertEnter" } })
@@ -535,4 +587,6 @@ return require("packer").startup(function()
 	-- "-------------------=== Unknown ===-------------------------------
 	use({ "neomake/neomake", event = { "BufAdd", "InsertEnter" } })
 	-- use({ "svermeulen/vimpeccable", event = { "BufAdd", "InsertEnter" } })
+
+	-- "-------------------=== Not used ===-------------------------------
 end)

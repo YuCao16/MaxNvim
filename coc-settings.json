@@ -3,13 +3,13 @@
   "signature.floatConfig": {"border": true},
   "suggest.floatConfig": {"border": true},
   "hover.floatConfig": {"border": true},
-  "pyright.enable": true,
   "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
   "snippets.userSnippetsDirectory":"~/.config/nvim/UltiSnips",
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes":["python","markdown"],
   "python.formatting.provider":"black",
   "python.sortImports.path":"/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/isort",
+  "pyright.completion.importSupport":false,
   "coc.source.vimtex.filetypes":["tex","plaintex","latex","markdown","*.ipynb"],
   "Lua.diagnostics.enable":false,
   "cSpell.enabledLanguageIds": [
@@ -17,6 +17,7 @@
   	"markdown",
   	"text"
   ],
+  "cSpell.language": "en",
   // be careful not to condense the hierarchy as it breaks pyls
   "languageserver": {
     "python": {
@@ -42,22 +43,6 @@
             "pycodestyle"
           ],
           "plugins": {
-            "jedi_completion": {
-              "enabled": true
-            },
-            "jedi_hover": {
-              "enabled": true
-            },
-            "jedi_references": {
-              "enabled": true
-            },
-            "jedi_signature_help": {
-              "enabled": true
-            },
-            "jedi_symbols": {
-              "enabled": true,
-              "all_scopes": true
-            },
             "mccabe": {
               "enabled": true,
               "threshold": 15
@@ -86,4 +71,5 @@
         }
       }
     }
-  }}
+  }
+}

@@ -22,7 +22,16 @@ autocmd FileType dashboard nnoremap <buffer> q :call Handle_dashboard()<CR>
 "autocmd FileType dashboard <buffer> :lua Handle_backgound()
 "autocmd FileType * if &ft!="dashboard" |:lua Handle_backgound() |endif
 autocmd FileType startify :lua require"nvim-tree".toggle(false, true)
+" autocmd FileType toggleterm nnoremap <buffer> <ESC> :q<cr>
+tnoremap <silent> <ESC> <C-\><C-n>
 hi ColorColumn guibg=#ff3131 ctermbg=236
+]])
+vim.cmd([[
+function! s:setup_org_colors() abort
+  hi OrgDONE guifg=green
+endfunction
+
+autocmd ColorScheme * call s:setup_org_colors()
 ]])
 -- vim.cmd([[autocmd FileType dashboard hi Normal guibg=NONE ctermbg=NONE ]])
 

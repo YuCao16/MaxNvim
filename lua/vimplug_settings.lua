@@ -36,7 +36,7 @@ g["lens#disabled_filetypes"] = { "nerdtree", "tagbar", "nvimtree" }
 -- "" Glow settings
 -- "=====================================================
 -- cmd([[let g:glow_border = "rounded"]])
-g["glow_border"] = "rounded"
+-- g["glow_border"] = "rounded"
 
 -- "=====================================================
 -- "" Dashboard settings
@@ -116,7 +116,7 @@ g["UltiSnipsSnippetsDir"] = "~/.config/nvim/UltiSnips"
 -- "=====================================================
 -- "" Dashboard settings
 -- "=====================================================
--- g["dashboard_default_executive"] = "telescope"
+g["dashboard_default_executive"] = "telescope"
 cmd([[
 let g:dashboard_custom_shortcut={
 \ 'last_session'       : 'SPC s l',
@@ -128,7 +128,7 @@ let g:dashboard_custom_shortcut={
 \ 'book_marks'         : 'SPC f b',
 \ }
 ]])
-g["dashboard_default_executive"] = "fzf"
+-- g["dashboard_default_executive"] = "fzf"
 g["dashboard_session_directory"] = "Users/caoyu/.local/share/nvim/session"
 cmd([[
 let g:dashboard_custom_header = [
@@ -172,7 +172,7 @@ let g:dashboard_custom_header = [
 -- "=====================================================
 -- "" nvim-tree.lua settings
 -- "=====================================================
-cmd([[let g:nvim_tree_icons = {'default':''}]])
+-- cmd([[let g:nvim_tree_icons = {'default':''}]])
 
 -- "=====================================================
 -- "" FizCursorHold settings
@@ -223,12 +223,12 @@ g["peekup_open"] = '"'
 -- "" Tex-Conceal.vim settings
 -- "=====================================================
 cmd([[set conceallevel=2]])
-cmd([[set concealcursor=nc]])
+-- cmd([[set concealcursor=nc]])
 g['tex_superscripts'] = "[0-9a-zA-W.,:;+-<>/()=]"
 g['tex_subscripts'] = "[0-9aehijklmnoprstuvx,+-/().]"
 g["tex_conceal"] = "abdmg"
 g["tex_flavor"] = "latex"
-cmd([[hi Conceal ctermbg=none]])
+-- cmd([[hi Conceal ctermbg=none]])
 
 -- "=====================================================
 -- "" everforest settings

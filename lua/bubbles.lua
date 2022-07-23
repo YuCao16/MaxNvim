@@ -30,10 +30,11 @@ local bubbles_theme = {
     c = { fg = colors.black, bg = colors.black },
   },
 }
-
+local theme = require('lualine.themes.onedark')
 require('lualine').setup {
   options = {
-    theme = bubbles_theme,
+    -- theme = bubbles_theme,
+    theme = theme,
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

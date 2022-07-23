@@ -12,21 +12,22 @@ local cmd = vim.cmd -- Execute Vim commands
 local map = vim.api.nvim_set_keymap
 g.mapleader = ","
 -- g.maplocalleader = ","
+-- tnoremap <silent> <C-[><C-[> <C-\><C-n>
 map("n", "<leader><leader>", ":noh<CR>", { noremap = false, silent = true })
 map("n", "<leader>p", ":TagbarToggle<CR>", { noremap = false, silent = false })
 -- map('n','<leader>p','\|', { noremap = false, silent = false })
--- map("n", "<leader>sf", ":Telescope find_files<CR>", { noremap = false, silent = false })
--- map("n", "<leader>ss", ":Telescope find_files<CR>", { noremap = false, silent = false })
--- map("n", "<leader>sg", ":Telescope live_grep<CR>", { noremap = false, silent = false })
+map("n", "<leader>sf", ":Telescope find_files<CR>", { noremap = false, silent = false })
+map("n", "<leader>ss", ":Telescope find_files<CR>", { noremap = false, silent = false })
+map("n", "<leader>sg", ":Telescope live_grep<CR>", { noremap = false, silent = false })
 map("n", "<leader>sb", ":Telescope buffers<CR>", { noremap = false, silent = false })
--- map("n", "<leader>sh", ":Telescope help_tags<CR>", { noremap = false, silent = false })
--- map("n", "<leader>so", ":Telescope oldfiles<CR>", { noremap = false, silent = false })
-map("n", "<leader>sf", ":Files<CR>", { noremap = false, silent = false })
-map("n", "<leader>ss", ":Files<CR>", { noremap = false, silent = false })
-map("n", "<leader>sg", ":Rg<CR>", { noremap = false, silent = false })
+map("n", "<leader>sh", ":Telescope help_tags<CR>", { noremap = false, silent = false })
+map("n", "<leader>so", ":Telescope oldfiles<CR>", { noremap = false, silent = false })
+-- map("n", "<leader>sf", ":Files<CR>", { noremap = false, silent = false })
+-- map("n", "<leader>ss", ":Files<CR>", { noremap = false, silent = false })
+-- map("n", "<leader>sg", ":Rg<CR>", { noremap = false, silent = false })
 -- map("n", "<leader>sb", ":Buffers<CR>", { noremap = false, silent = false })
-map("n", "<leader>sh", ":Helptags<CR>", { noremap = false, silent = false })
-map("n", "<leader>so", ":History<CR>", { noremap = false, silent = false })
+-- map("n", "<leader>sh", ":Helptags<CR>", { noremap = false, silent = false })
+-- map("n", "<leader>so", ":History<CR>", { noremap = false, silent = false })
 map("n", "<leader>sl", ":SessionManager load_last_session<CR>", { noremap = false, silent = false })
 -- map("n", "<leader>q", ":NvimTreeToggle<CR>", { noremap = false, silent = false })
 map("n", "<leader>q", ":lua Handle_nvimtree()<CR>", { noremap = false, silent = false })
@@ -68,6 +69,8 @@ map("x", "ga", "<Plug>(EasyAlign)", {})
 map("i", "<C-y>", "<Plug>(coc-snippets-expand)", {})
 cmd([[inoremap <silent><nowait><expr> <down> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<down>"]])
 cmd([[inoremap <silent><nowait><expr> <up> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<up>"]])
+cmd([[nnoremap <silent><nowait><expr> <down> coc#float#has_scroll() ? coc#float#scroll(1) : "\<down>"]])
+cmd([[nnoremap <silent><nowait><expr> <up> coc#float#has_scroll() ? coc#float#scroll(0) : "\<up>"]])
 
 -- nmap <leader>i :so ~/.config/nvim/settings.vim<CR>
 
