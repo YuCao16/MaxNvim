@@ -354,6 +354,11 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "sbdchd/neoformat", event = { "BufAdd", "InsertEnter" } }) -- " Format .tex
+	use({ "mhartington/formatter.nvim",
+		config=function()
+			require("formatter").setup()
+		end,
+	})
 	use({
 		"numToStr/Comment.nvim",
 		event = { "BufAdd", "InsertEnter" },
@@ -472,12 +477,14 @@ return require("packer").startup(function()
 		ft = { "markdown", "tex", "ipynb", "org", "json" },
 		event = { "BufAdd", "InsertEnter" },
 	})
-	use({ "ellisonleao/glow.nvim", ft = { "markdown" },
+	use({
+		"ellisonleao/glow.nvim",
+		ft = { "markdown" },
 		config = function()
 			require("glow").setup({
 				border = "double",
 			})
-        end,
+		end,
 	})
 
 	use({ "chrisbra/csv.vim", ft = { "csv" } }) -- " CSV
