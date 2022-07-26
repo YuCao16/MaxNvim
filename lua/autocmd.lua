@@ -17,6 +17,8 @@
 -- ]])
 vim.cmd([[
 autocmd FileType dashboard nnoremap <buffer> q :call Handle_dashboard()<CR>
+autocmd FileType dashboard nnoremap <buffer> <up> k
+autocmd FileType dashboard nnoremap <buffer> <down> j
 "autocmd filetype * <buffer> :hi ColorColumn guibg=#ff3131 ctermbg=236
 "autocmd FileType * :lua Handle_backgound()
 "autocmd FileType dashboard <buffer> :lua Handle_backgound()

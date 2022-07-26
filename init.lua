@@ -6,6 +6,8 @@
 --            ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║		  --
 --            ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝		  --
 --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+vim.cmd([[set encoding=utf-8]])
+vim.cmd([[let g:python3_host_prog="/Library/Frameworks/Python.framework/Versions/3.9/bin/python3"]])
 
 require('impatient')
 require('plugins')

@@ -354,8 +354,9 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "sbdchd/neoformat", event = { "BufAdd", "InsertEnter" } }) -- " Format .tex
-	use({ "mhartington/formatter.nvim",
-		config=function()
+	use({
+		"mhartington/formatter.nvim",
+		config = function()
 			require("formatter").setup()
 		end,
 	})
@@ -417,10 +418,19 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "weilbith/nvim-code-action-menu" })
-	use({ "tpope/vim-surround", event = { "BufAdd", "InsertEnter" } })
+	use({
+		"kylechui/nvim-surround",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+		event = { "BufAdd", "InsertEnter" },
+	})
 	use({ "honza/vim-snippets", event = { "BufAdd", "InsertEnter" } })
 
 	-- " use 'sirver/ultisnips'
+	-- use({ "tpope/vim-surround", event = { "BufAdd", "InsertEnter" } })
 
 	-- "-------------------=== Debugging navigation ===-------------
 	use({ "mfussenegger/nvim-dap", ft = { "python" }, event = { "BufAdd", "InsertEnter" } })
