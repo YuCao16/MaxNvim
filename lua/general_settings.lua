@@ -26,20 +26,7 @@ opt.incsearch = true
 opt.hlsearch = true
 vim.o.pumheight = 20
 vim.o.scrolloff = 10
--- vim.o.enc = utf-8
--- vim.cmd([[set mouse=a]])
--- vim.cmd([[set termguicolors]])
--- vim.cmd([[set pumheight=20]])
--- vim.cmd([[set scrolloff=10]])
--- vim.cmd([[set number]])
--- vim.cmd([[set ruler]])
--- vim.cmd([[set hidden]])
--- vim.cmd([[set cursorline]])
+vim.cmd([[set enc=utf-8]])
+vim.cmd([[set t_Co=256]])
 -- vim.cmd([[set nofoldenable]])
 -- vim.cmd([[set foldmethod=indent]])
-vim.cmd([[set enc=utf-8]])
--- vim.cmd([[set ignorecase]])
--- vim.cmd([[set smartcase]])
-vim.cmd([[set t_Co=256]])
--- vim.cmd([[set incsearch]])
--- vim.cmd([[set hlsearch]])

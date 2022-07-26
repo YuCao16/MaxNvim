@@ -7,27 +7,18 @@
 --            ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝		  --
 --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
 
--- vim.cmd([[
--- autocmd VimEnter *
---     \   if !argc()
---     \ |   Startify
---     \ |   execute 'NvimTreeOpen'
---     \ |   wincmd w
---     \ | endif
--- ]])
+-- quick exit from dashboard
 vim.cmd([[
 autocmd FileType dashboard nnoremap <buffer> q :call Handle_dashboard()<CR>
 autocmd FileType dashboard nnoremap <buffer> <up> k
 autocmd FileType dashboard nnoremap <buffer> <down> j
-"autocmd filetype * <buffer> :hi ColorColumn guibg=#ff3131 ctermbg=236
-"autocmd FileType * :lua Handle_backgound()
-"autocmd FileType dashboard <buffer> :lua Handle_backgound()
-"autocmd FileType * if &ft!="dashboard" |:lua Handle_backgound() |endif
 autocmd FileType startify :lua require"nvim-tree".toggle(false, true)
-" autocmd FileType toggleterm nnoremap <buffer> <ESC> :q<cr>
+autocmd FileType toggleterm nnoremap <buffer> <ESC> :q<cr>
 tnoremap <silent> <ESC> <C-\><C-n>
 hi ColorColumn guibg=#ff3131 ctermbg=236
 ]])
+
+-- config orgmode Done symbol
 vim.cmd([[
 function! s:setup_org_colors() abort
   hi OrgDONE guifg=green
@@ -35,9 +26,8 @@ endfunction
 
 autocmd ColorScheme * call s:setup_org_colors()
 ]])
--- vim.cmd([[autocmd FileType dashboard hi Normal guibg=NONE ctermbg=NONE ]])
 
--- vim.cmd([[ autocmd VimLeave * SessionSave<CR> ]])
+-- auto config scrollbar
 vim.cmd([[
 augroup ScrollbarInit
   autocmd!
@@ -46,10 +36,8 @@ augroup ScrollbarInit
   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 augroup end
 ]])
--- vim.cmd([[autocmd FileType dashboard nnoremap <buffer> q :bd<CR>]])
--- vim.cmd([[
--- 	autocmd FileType dashboard if len(getbufinfo({'buflisted':1})) == 0 nnoremap <buffer> q :bd<CR> endif
--- ]])
+
+-- autocmd for filetype settings
 vim.cmd([[
 autocmd FileType html setlocal shiftwidth=2 tabstop=4 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -57,7 +45,6 @@ autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType tex setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType vim setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType lua setlocal shiftwidth=4 tabstop=4 softtabstop=4
-"autocmd FileType org setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
 autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
@@ -72,18 +59,21 @@ vim.cmd([[
 autocmd FileType python map <buffer> <leader>2 :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 ]])
 
+-- config for vim-jupyter, convert *.ipynb to markdown
 vim.cmd([[
-" autocmd FileType,BufNewFile,BufFilePre,BufRead *.md set filetype=tex
-" autocmd FileType,BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 autocmd FileType,BufNewFile,BufFilePre,BufRead *.ipynb set filetype=tex
-
 autocmd BufCreate *.ipynb set filetype=tex
 autocmd BufCreate *.ipynb set filetype=markdown
 autocmd BufWinEnter echo 1
+]])
 
-"autocmd FileType,BufNewFile,BufFilePre,BufRead *.ipynb set filetype=markdown
+-- basic settings for python and markdown
+vim.cmd([[
 autocmd FileType python set colorcolumn=80
-"autocmd FileType python :hi ColorColumn guibg=#ff3131 ctermbg=236
 autocmd FileType markdown set textwidth=80
 ]])
-vim.cmd([[autocmd bufenter * if (winnr("$") == 1 && &filetype == "nvimtree") | q | endif]])
+
+-- quit nvimtree if it's the only buffer left
+vim.cmd([[
+autocmd bufenter * if (winnr("$") == 1 && &filetype == "nvimtree") | q | endif
+]])

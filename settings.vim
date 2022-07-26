@@ -7,7 +7,7 @@
 "            ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║		  "
 "            ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝		  "
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-" let g:nvim_tree_icons = {'default':''}
+
 "=====================================================
 "" Coc Configurations
 "=====================================================
@@ -22,10 +22,7 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-" inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
-" inoremap <expr><space>  pumvisible() ? "\<C-y>" : "\<space>"
-" let g:coc_snippet_next =  '<tab>'
-" coc-prettier format
+
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 "=====================================================
@@ -65,28 +62,9 @@ function! SwitchFormatter()
 	:Neoformat
     endif
 endfunction
-" function! SwitchFormatter()
-"     if &filetype == 'tex'
-" 	:Neoformat latexindent
-"     else
-" 	:call CocAction('format')
-"     endif
-" endfunction
 
-function! Transparent_bg()
-	if g:colors_name == 'github_dark'
-		:lua require('github-theme').setup({transparent=true})
-		" hi BufferInactive guifg='#24EA53'
-	else
-		hi Normal guibg=NONE ctermbg=NONE           " let background transparent
-		hi NonText ctermbg=NONE guibg=NONE          " make background transparent even if there is no text
-		hi SignColumn ctermbg=NONE guibg=NONE       " column sign background
-		hi LineNr ctermfg=NONE guibg=NONE           " Column number background
-		hi Pmenu guibg='#100f11'
-	endif
-	" :call bufferline#highlight#setup()
-endfunction
-
+" handle nvimtree, if nvimtree open then focus, if no nvimtree then toggle
+" nvimtree
 lua << EOF
 function Handle_nvimtree()
 	if require'nvim-tree.view'.is_visible() then
@@ -101,28 +79,7 @@ function Handle_nvimtree()
 end
 EOF
 
-lua << EOF
-function Handle_backgound()
-	if vim.bo.filetype == "dashboard" then
-		-- require'github-theme'.setup({transparent=true})
-		vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
-		-- vim.cmd("hi NonText ctermbg=NONE guibg=NONE")
-	else
-		-- vim.cmd([[hi Normal guibg='pink' ctermbg='pink' ]])
-		vim.cmd("colorscheme everforest")
-		vim.cmd("colorscheme github_dark")
-	end
-end
-
--- function Handle_ColorColumn()
--- 	if vim.bo.filetype == "python" then
--- 		vim.cmd("hi ColorColumn guibg=#ff3131 ctermbg=236")
--- 	else
--- 		vim.cmd("hi ColorColumn guibg=None ctermbg=None")
--- 	end
--- end
-EOF
-
+" if dashboard is the only buffer, then press q to quit nvim
 function! Handle_dashboard()
 	if len(getbufinfo({'buflisted':1}))==0
 	:q
@@ -131,7 +88,7 @@ function! Handle_dashboard()
 	endif
 endfunction
 
-
+" check if coc.nvim documentation available
 function! Show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')

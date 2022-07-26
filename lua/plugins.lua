@@ -538,7 +538,6 @@ return require("packer").startup(function()
 	-- use("vim-pandoc/vim-pandoc")
 	-- "-------------------=== Games ===--------------------------
 	use({ "ThePrimeagen/vim-be-good", event = { "BufAdd", "InsertEnter" } }) --"game
-	use({ "ianding1/leetcode.vim", event = { "BufAdd", "InsertEnter" } })
 	use({ "tjdevries/train.nvim", event = { "BufAdd", "InsertEnter" } })
 	use({
 		"gbprod/cutlass.nvim",
