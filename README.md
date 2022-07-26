@@ -1,5 +1,11 @@
 # My Neovim Configuration
 
+I created this repository because I have two computers, one in the lab and one
+at home, and the two computers share one Neovim configuration. If you happen to
+find this repository and are interested in screenshots, please let me know
+(e.g. give me a star) and I will upload the full configuration method and
+features description.
+
 ## Screenshot
 
 1. Open Neovim![overall](img/overall.png)
