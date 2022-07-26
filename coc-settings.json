@@ -3,6 +3,7 @@
   "signature.floatConfig": {"border": true},
   "suggest.floatConfig": {"border": true},
   "hover.floatConfig": {"border": true},
+  "diagnostic.floatConfig": {"border": true},
   "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
   "snippets.userSnippetsDirectory":"~/.config/nvim/UltiSnips",
   "coc.preferences.formatOnType": true,
