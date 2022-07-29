@@ -8,6 +8,7 @@
 --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
 vim.cmd([[let g:python3_host_prog="/Library/Frameworks/Python.framework/Versions/3.9/bin/python3"]])
 
+
 require("impatient") --speed up start up
 require("plugins") -- all plugins and some configs using packer.nvim
 require("bubbles") -- custom lualine
